@@ -1,0 +1,101 @@
+---
+title: "Posit Cloud Survey"
+format: html
+editor: visual
+---
+
+## Libraries
+
+```{r download packages}
+library(tidyverse)
+library(skimr)
+library(psych)
+library(qualtRics)
+library(naniar)
+library(zipcodeR)
+library(maps)
+library(leaflet)
+```
+
+## Load Datasets
+
+```{r load data}
+
+qt_raw <- read_survey("~/Downloads/Photovoice/R/Greenspace+Preferences+Survey+-+Positly_July+31,+2026_11.45.zip")
+
+q1 <- read_survey("~/Downloads/Photovoice/R/Greenspace+Preferences+Survey+-+Positly_July+31,+2026_11.45(1).zip")
+```
+
+## Descriptive Statistics
+
+```{r descriptive stats}
+
+# check that both datasets match up
+dim(qt_raw)
+dim(q1)
+names(qt_raw) == names(q1)
+
+# descriptive stats
+skim(q1)
+describe(q1)
+
+# ex
+table(qt_raw$gender...85)
+prop.table(table(qt_raw$gender...85))
+
+table(qt_raw$az)
+prop.table(table(qt_raw$az))
+```
+
+## Missingness
+
+```{r missing data}
+
+# columns summary
+qt_raw |>
+  summarise(across(everything(), ~ sum(is.na(.)))) |>
+  glimpse()
+
+# missingness graph
+qt_raw |>
+  select(age...84, gender...85, disability, housing_type, householdincome, income, az) |> 
+  vis_miss()
+```
+
+## Map of Zipcodes
+
+```{r mapping zipcodes}
+
+# coordinates & zipcodes
+zip_counts <- qt_raw |>
+  count(zipcode, name = "n") |>
+  mutate(zipcode = as.character(zipcode))
+
+zip_coords <- zipcodeR::zip_code_db |>
+  select(zipcode, lat, lng) |>
+  mutate(zipcode = as.character(zipcode))
+
+zip_counts <- zip_counts |>
+  left_join(zip_coords, by = "zipcode")
+
+az_map <- map_data("county", region = "arizona")
+
+# static plot
+ggplot() +
+  geom_polygon(data = az_map, aes(x = long, y = lat, group = group),
+               fill = "gray95", color = "white") +
+  geom_point(data = zip_counts, aes(x = lng, y = lat, size = n),
+             color = "steelblue", alpha = 0.6) +
+  coord_fixed(1.3) +
+  theme_void() +
+  labs(title = "Respondents by Zip Code", size = "Count") +
+  theme(plot.title = element_text(hjust = 0.7))
+
+# interactive plot
+leaflet(zip_counts) %>%
+  addTiles() %>%
+  addCircleMarkers(lng = ~lng, lat = ~lat, radius = ~sqrt(n) * 2,
+                   popup = ~paste(zipcode, ":", n, "respondents"))
+
+
+```

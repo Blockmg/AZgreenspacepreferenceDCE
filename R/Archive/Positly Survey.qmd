@@ -1,0 +1,194 @@
+---
+title: "positly_survey"
+format: html
+editor: visual
+---
+
+## Libraries
+
+```{libraries r}
+
+library(qualtRics)
+library(tidyverse)
+library(janitor) 
+library(stringr)
+```
+
+## Load Datasets
+
+```{r load data}
+
+qt_labels <- read_survey("~/Downloads/Photovoice/R/Greenspace+Preferences+Survey+-+Positly_July+31,+2026_11.45.zip")
+
+qt_values <- read_survey("~/Downloads/Photovoice/R/Greenspace+Preferences+Survey+-+Positly_July+31,+2026_11.45(1).zip")
+
+# to maintain original data, create duplicate dataframes to work in from this point forward
+df.labs <- qt_labels
+df.vals <- qt_values
+
+```
+
+## Rename & Clean Both Datasets
+
+```{r clean datasets}
+
+# drop IP addresses
+df.labs <- df.labs |>
+  select(-Status)
+
+df.vals <- df.vals |>
+  select(-Status)
+
+# janitor::cleannames() tidies & standardizes all column names
+df.labs <- df.labs |> clean_names() 
+df.vals <- df.vals |> clean_names()
+
+# rename dce questions in both dataframes
+rename_map <- c(
+  practice_question = "choice_set1",
+  a1 = "q2_21",
+  a2 = "q3_22",
+  a3 = "q4_23",
+  a4 = "q5_24",
+  a5 = "q6_25",
+  a6 = "q7_26",
+  a7 = "q8_27",
+  a8 = "q9_28",
+  a9 = "q10",
+  b1 = "q1",
+  b2 = "q2_31",
+  b3 = "q3_32",
+  b4 = "q4_33",
+  b5 = "q5_34",
+  b6 = "q6_35",
+  b7 = "q7_36",
+  b8 = "q8_37",
+  b9 = "q9_38")
+
+df.labs <- df.labs |> rename(all_of(rename_map))
+df.vals <- df.vals |> rename(all_of(rename_map))
+
+# rename other questions
+rename_map2 <- c(
+  south_az = "sa",
+  volunteer = "q144",
+  why_sf_text = "q110",
+  age = "age_63",
+  gender = "gender_64",
+  household = "q142",
+  household_u18 = "q143",
+  yrs_az = "az",
+  state = "q111",
+  state_51_text = "q111_51_text",
+  positly_response_id = "participant_id",
+  positly_age = "age_84",
+  positly_gender = "gender_85",
+  positly_income = "householdincome")
+
+df.labs <- df.labs |> rename(all_of(rename_map2))
+df.vals <- df.vals |> rename(all_of(rename_map2))
+
+# use filter() to drop rows that are not from southern az, have an unfinished survey, and did not consent to survey
+# use remove_empty() to drop all columns where every single value is NA
+df.labs <- df.labs |> 
+  filter(finished == TRUE,
+         south_az == "Yes",
+         consent == "Yes, I consent.") |>
+  remove_empty("cols")
+df.vals <- df.vals |>
+  filter(finished == 1,
+         south_az == 1,
+         consent == 1) |>
+  remove_empty("cols") |>
+  mutate(across(where(is.numeric)))
+
+# note: volunteer question was dropped because all responses were NA, question was probably added to survey after positly runs were completed
+```
+
+## Recoding & Cleaning for `df.vals` Only
+
+```{r clean df.vals only}
+
+# convert multiple select questions to characters & use stringr::str_detect() to create T/F dummy columns
+df.vals <- df.vals |>
+  mutate(across(c(race, membership, use, type, mode_transport), as.character)) |>
+  mutate(
+    race_white            = str_detect(race, "1"),
+    race_black            = str_detect(race, "2"),
+    race_native_american  = str_detect(race, "3"),
+    race_asian            = str_detect(race, "4"),
+    race_pacific_islander = str_detect(race, "5"),
+    race_other            = str_detect(race, "6"),
+    race_prefer           = str_detect(race, "7"),
+    membership_community_member    = str_detect(membership, "1"),
+    membership_coalition_member    = str_detect(membership, "2"),
+    membership_community_org       = str_detect(membership, "3"),
+    membership_org_leader          = str_detect(membership, "4"),
+    membership_local_gov           = str_detect(membership, "5"),
+    membership_policy_maker        = str_detect(membership, "6"),
+    membership_greenspace_designer = str_detect(membership, "7"),
+    membership_other               = str_detect(membership, "8"),
+    membership_prefer              = str_detect(membership, "9"),
+    use_exercise_sports = str_detect(use, "1"),
+    use_garden          = str_detect(use, "2"),
+    use_relax           = str_detect(use, "3"),
+    use_social          = str_detect(use, "4"),
+    use_other           = str_detect(use, "5"),
+    type_city_neighborhood_park   = str_detect(type, "1"),
+    type_desert_natural_area      = str_detect(type, "2"),
+    type_walk_bike                = str_detect(type, "3"),
+    type_community_garden         = str_detect(type, "4"),
+    type_private_yard             = str_detect(type, "5"),
+    type_school_greenspace        = str_detect(type, "6"),
+    type_golf_recreational_area   = str_detect(type, "7"),
+    type_other                    = str_detect(type, "8"),
+    mode_transport_walk             = str_detect(mode_transport, "1"),
+    mode_transport_bike             = str_detect(mode_transport, "2"),
+    mode_transport_personal_vehicle = str_detect(mode_transport, "3"),
+    mode_transport_public_transit   = str_detect(mode_transport, "4"),
+    mode_transport_rideshare_taxi   = str_detect(mode_transport, "5"),
+    mode_transport_other            = str_detect(mode_transport, "6"))
+
+# check to see that the above code worked
+df.vals |> select(race, starts_with("race_")) |> head(10)
+df.vals |> select(membership, starts_with("membership_")) |> head(10)
+df.vals |> select(use, starts_with("use_")) |> head(10)
+df.vals |> select(type, starts_with("type_")) |> head(10)
+df.vals |> select(mode_transport, starts_with("mode_transport_")) |> head(10)
+
+# drop original multi select columns since theyre redundant
+df.vals <- df.vals |> 
+  select(-c(mode_transport, type, use, race, membership))
+
+# convert remaining numeric columns into factors, excluding metadata
+# ! is used to exclude columns 
+df.vals <- df.vals |> 
+  mutate(across(where(is.numeric) & !c(age, positly_age, household, household_u18, zipcode, duration_in_seconds, progress, q_recaptcha_score, signature_size),factor))
+```
+
+## Reshaping DCE 
+
+```{r reshape dce}
+
+# select for dce columns to view a snapshot of data
+df.vals |> 
+  select(response_id, a1:a9, b1:b9) |>
+  view()
+
+# reshape data into longform
+dce <- df.vals |> 
+  select(response_id, a1:a9, b1:b9) |>
+  mutate(id = row_number()) |> # puts ids in numeric order
+  pivot_longer( # reshaping fuction
+    cols = c(a1:a9, b1:b9),
+    names_to = "all_tasks", # create 'all_tasks' to store which original columns each value came from
+    values_to = "choice",
+    values_drop_na = TRUE) |> 
+  mutate( # create 'block' and 'csno' columns
+    block = if_else(str_starts(all_tasks, "a"), 1, 2),
+    csno = as.numeric(str_extract(all_tasks, "[1-9]+"))) |>
+  select(-all_tasks) |> # drops all_tasks
+  group_by(id) |> # groups data by respondent
+  mutate(ncs = n()) |> # create 'ncs' column by each respondent
+  ungroup() # remove ungroup so that any code ran afterwards will apply to the whole dataset normally again
+```
