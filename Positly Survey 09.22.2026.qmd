@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "positly_survey_v2"
 format: html
@@ -420,6 +421,8 @@ return(P)}
 
 ```
 =======
+=======
+>>>>>>> 077d6f0 (adding code)
 ---
 title: "positly_survey_v2"
 format: html
@@ -840,4 +843,7 @@ P = apollo_prepareProb(P, apollo_inputs, functionality)
 return(P)}
 
 ```
+<<<<<<< HEAD
+>>>>>>> 077d6f0 (adding code)
+=======
 >>>>>>> 077d6f0 (adding code)

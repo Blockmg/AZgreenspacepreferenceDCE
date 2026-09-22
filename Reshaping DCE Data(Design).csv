@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 id,ncs,block,csno,choice,alt1_distance,alt1_amenities,alt1_plant,alt1_safety,alt1_shade,alt1_accessibility,alt2_distance,alt2_amenities,alt2_plant,alt2_safety,alt2_shade,alt2_accessibility
 1,9,2,1,2,,,,,,,,,,,,
 1,9,2,2,2,,,,,,,,,,,,
@@ -24,6 +25,8 @@ block,"a = 1, b = 2",,,,,,,,,,,,,,,
 csno ,which choice task (a/b:1-9),,,,,,,,,,,,,,,
 choice,which alternative picked within task,,,,,,,,,,,,,,,
 =======
+=======
+>>>>>>> 077d6f0 (adding code)
 id,ncs,block,csno,choice,alt1_distance,alt1_amenities,alt1_plant,alt1_safety,alt1_shade,alt1_accessibility,alt2_distance,alt2_amenities,alt2_plant,alt2_safety,alt2_shade,alt2_accessibility
 1,9,2,1,2,,,,,,,,,,,,
 1,9,2,2,2,,,,,,,,,,,,
@@ -48,4 +51,7 @@ ncs,total choice tasks completed,,,,,,,,,,,,,,,
 block,"a = 1, b = 2",,,,,,,,,,,,,,,
 csno ,which choice task (a/b:1-9),,,,,,,,,,,,,,,
 choice,which alternative picked within task,,,,,,,,,,,,,,,
+<<<<<<< HEAD
+>>>>>>> 077d6f0 (adding code)
+=======
 >>>>>>> 077d6f0 (adding code)
