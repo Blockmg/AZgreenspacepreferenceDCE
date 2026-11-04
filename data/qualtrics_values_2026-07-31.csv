@@ -1,0 +1,375 @@
+StartDate,EndDate,Status,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,DistributionChannel,UserLanguage,Q_RecaptchaScore,Q_DuplicateRespondent,consent,signature _Id,signature _Name,signature _Size,signature _Type,Adult,SA,choice_set1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,QC_agree,evaluation _1,evaluation _2,evaluation _3,evaluation _4,"prefer_space ",mode_transport ,mode_transport _6_TEXT,"type ",type _8_TEXT,use ,use _5_TEXT,"bond ",bond_no_1,bond_no_2,bond_no_3,bond_no_4,bond_no_5,water_values ,Q144,"safety ",safety_features ,safety_features _5_TEXT,Q110,age,gender,gender_4_TEXT,"hispanic ",race,race_6_TEXT,zipcode,Q142,Q143,"az ",Q111,Q111_51_TEXT,"housing_type ",housing_type _7_TEXT,membership,membership_8_TEXT,education,income,disability,"comments ",participantID,age,gender,householdincome
+Start Date,End Date,Response Type,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Distribution Channel,User Language,Q_RecaptchaScore,Q_DuplicateRespondent,I consent to participating in this study on greenspaces in Southern Arizona.,Sign below using your finger or a clicker to consent to participate in this study: - Id,Sign below using your finger or a clicker to consent to participate in this study: - Name,Sign below using your finger or a clicker to consent to participate in this study: - Size,Sign below using your finger or a clicker to consent to participate in this study: - Type,Are you an adult over the age of 18?,Are you currently living in Southern Arizona?,"Please answer this example question to practice before we get to the 9 real questions: 
+Which park would you choose?
+
+
+	
+		
+			Attribute
+			
+				Park A
+			
+			
+				Park B
+			
+		
+	
+
+	
+		
+			
+				Distance
+			
+			
+				🚗 Greater than 4 miles
+			
+			
+				🚶 Less than 1 mile
+			
+		
+
+		
+			
+				Amenities
+			
+			
+				🧺 Gathering areas
+			
+			
+				🚫 No additional amenities
+			
+		
+
+		
+			
+				Plant type
+			
+			
+				🌺 Mostly non-native plants 
+			
+				🌵 Mostly native plants 
+		
+
+		
+			
+				Safety
+			
+			🚓  Patrol
+			
+			
+				💡 Night lighting
+		
+
+		
+			
+				Shade
+			
+			
+				 ⛱️ Shade from tree
+			 ☀️ No shade 
+		
+
+		
+			
+				Accessibility
+			
+			
+				♿ Paved accessible paths
+			
+				🚫 No paved accessible paths","1 of 9: Which park would you choose?
+AttributesPark APark B
+Distance🚗 Over 4 miles🚶 Under 1 mile
+Amenities🧺 Gathering spaces🛝 Nature play
+Plant type🌺 Non-native plants🌵 Native plants
+Safety🚓 Patrol🚫 No added safety features
+Shade🌳 Shade from tree☀️ No shade
+Accessibility♿ Paved accessible paths🚫 No accessible paths","2 of 9: Which park would you choose?
+AttributesPark APark B
+Distance🚲 2–4 miles🚗 Over 4 miles
+Amenities🚫 No amenities🛝 Nature play
+Plant type🌵 Native plants🌵🌺 Mixed plant types
+Safety🚓 Patrol💡 Night lighting
+Shade🌳 Shade from tree⛱️ Shade from ramada
+Accessibility🥾 Limited accessible paths♿ Paved accessible paths","3 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚶 Under 1 mile🚗 Over 4 miles
+Amenities🧺 Gathering spaces🚫 No amenities
+Plant type🌵🌺 Mixed plant types🌺 Non-native plants
+Safety💡 Night lighting🚫 No added safety features
+Shade☀️ No shade⛱️ Shade from ramada
+Accessibility🚫 No accessible paths🥾 Limited accessible paths","4 of 9: Which park would you choose?
+
+ AttributesPark APark B
+Distance🚗 Over 4 miles🚶 Under 1 mile
+Amenities🧺 Gathering spaces🛝 Nature play
+Plant type🌵 Native plants🌺 Non-native plants
+Safety🚫 No added safety features💡 Night lighting
+Shade⛱️ Shade from ramada🌳 Shade from tree
+Accessibility🥾 Limited accessible paths🚫 No accessible paths","5 of 9: Which park would you choose?
+
+ AttributesPark APark B
+Distance🚗 Over 4 miles🚶 Under 1 mile
+Amenities🚫 No amenities🧺 Gathering spaces
+Plant type🌺 Non-native plants🌵 Native plants
+Safety💡 Night lighting🚫 No added safety features
+Shade☀️ No shade🌳 Shade from tree
+Accessibility🥾 Limited accessible paths♿ Paved accessible paths","6 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚶 Under 1 mile🚗 Over 4 miles
+Amenities🛝 Nature play🧺 Gathering spaces
+Plant type🌵 Native plants🌵🌺 Mixed plant types
+Safety🚓 Patrol💡 Night lighting
+Shade☀️ No shade🌳 Shade from tree
+Accessibility♿ Paved accessible paths🥾 Limited accessible paths","7 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚶 Under 1 mile🚲 2–4 miles
+Amenities🧺 Gathering spaces🛝 Nature play
+Plant type🌵🌺 Mixed plant types🌺 Non-native plants
+Safety💡 Night lighting🚓 Patrol
+Shade⛱️ Shade from ramada☀️ No shade
+Accessibility♿ Paved accessible paths🚫 No accessible paths","8 of 9: Which park would you choose?
+
+ AttributesPark APark B
+Distance🚲 2–4 miles🚶 Under 1 mile
+Amenities🧺 Gathering spaces🚫 No amenities
+Plant type🌺 Non-native plants🌵🌺 Mixed plant types
+Safety🚫 No added safety features🚓 Patrol
+Shade☀️ No shade🌳 Shade from tree
+Accessibility♿ Paved accessible paths🚫 No accessible paths","9 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚗 Over 4 miles🚲 2–4 miles
+Amenities🚫 No amenities🛝 Nature play
+Plant type🌵🌺 Mixed plant types🌵 Native plants
+Safety🚓 Patrol💡 Night lighting
+Shade⛱️ Shade from ramada🌳 Shade from tree
+Accessibility🚫 No accessible paths🥾 Limited accessible paths","1 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚗 Over 4 miles🚲 2–4 miles
+Amenities🚫 No amenities🧺 Gathering spaces
+Plant type🌵 Native plants🌵🌺 Mixed plant types
+Safety💡 Night lighting🚓 Patrol
+Shade🌳 Shade from tree⛱️ Shade from ramada
+Accessibility♿ Paved accessible paths🥾 Limited accessible paths","2 of 9: Which park would you choose?
+
+ AttributesPark APark B
+Distance🚗 Over 4 miles🚲 2–4 miles
+Amenities🛝 Nature play🚫 No amenities
+Plant type🌵🌺 Mixed plant types🌺 Non-native plants
+Safety🚫 No added safety features💡 Night lighting
+Shade🌳 Shade from tree⛱️ Shade from ramada
+Accessibility🥾 Limited accessible paths♿ Paved accessible paths","3 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚶 Under 1 mile🚲 2–4 miles
+Amenities🛝 Nature play🚫 No amenities
+Plant type🌺 Non-native plants🌵🌺 Mixed plant types
+Safety💡 Night lighting🚫 No added safety features
+Shade⛱️ Shade from ramada☀️ No shade
+Accessibility🥾 Limited accessible paths♿ Paved accessible paths","4 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚲 2–4 miles🚶 Under 1 mile
+Amenities🧺 Gathering spaces🛝 Nature play
+Plant type🌵 Native plants🌵🌺 Mixed plant types
+Safety🚓 Patrol🚫 No added safety features
+Shade🌳 Shade from tree☀️ No shade
+Accessibility🚫 No accessible paths🥾 Limited accessible paths","5 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚲 2–4 miles🚶 Under 1 mile
+Amenities🛝 Nature play🧺 Gathering spaces
+Plant type🌵 Native plants🌺 Non-native plants
+Safety💡 Night lighting🚓 Patrol
+Shade☀️ No shade🌳 Shade from tree
+Accessibility🚫 No accessible paths♿ Paved accessible paths","6 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚲 2–4 miles🚗 Over 4 miles
+Amenities🛝 Nature play🧺 Gathering spaces
+Plant type🌵🌺 Mixed plant types🌺 Non-native plants
+Safety🚓 Patrol🚫 No added safety features
+Shade⛱️ Shade from ramada☀️ No shade
+Accessibility♿ Paved accessible paths🚫 No accessible paths","7 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚶 Under 1 mile🚲 2–4 miles
+Amenities🧺 Gathering spaces🚫 No amenities
+Plant type🌺 Non-native plants🌵 Native plants
+Safety🚓 Patrol🚫 No added safety features
+Shade☀️ No shade⛱️ Shade from ramada
+Accessibility🥾 Limited accessible paths🚫 No accessible paths","8 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚲 2–4 miles🚗 Over 4 miles
+Amenities🚫 No amenities🧺 Gathering spaces
+Plant type🌵🌺 Mixed plant types🌵 Native plants
+Safety🚫 No added safety features🚓 Patrol
+Shade🌳 Shade from tree⛱️ Shade from ramada
+Accessibility♿ Paved accessible paths🚫 No accessible paths","9 of 9: Which park would you choose?
+
+ 
+AttributesPark APark B
+Distance🚗 Over 4 miles🚶 Under 1 mile
+Amenities🛝 Nature play🚫 No amenities
+Plant type🌺 Non-native plants🌵 Native plants
+Safety🚫 No added safety features💡 Night lighting
+Shade🌳 Shade from tree☀️ No shade
+Accessibility🚫 No accessible paths🥾 Limited accessible paths","To help us ensure that survey responses are being completed carefully, please select “Agree” for this question.","Considering the questions you just answered, please indicate how strongly you agree or disagree with each statement. - I found the available greenspaces made sense.","Considering the questions you just answered, please indicate how strongly you agree or disagree with each statement. - I found making a choice between different greenspaces difficult.","Considering the questions you just answered, please indicate how strongly you agree or disagree with each statement. - I believe my choices will have an impact on how greenspaces are developed in the future.","Considering the questions you just answered, please indicate how strongly you agree or disagree with each statement. - The scenarios reflected situations I could realistically imagine in my community.","How many hours do you spend in any greenspaces in Tucson (such as parks, desert trails, natural areas, or yards) per week on average?",What is your primary mode of transportation to your preferred greenspace? (Select all that apply) - Selected Choice,What is your primary mode of transportation to your preferred greenspace? (Select all that apply) - Other (please specify) - Text,What types of green spaces in Tucson do you visit or spend time in? (Select all that apply) - Selected Choice,What types of green spaces in Tucson do you visit or spend time in? (Select all that apply) - Other (please specify): - Text,What do you use the greenspace for? (Select all that apply) - Selected Choice,What do you use the greenspace for? (Select all that apply) - Other (please specify): - Text,"A public bond is a way for local governments to raise money by borrowing funds for community projects, which is typically repaid over time through taxes.
+
+Would you be willing to support a public bond to fund greenspace initiatives?","You indicated that you would not be willing to support a public bond to fund greenspace initiatives.
+
+
+Please indicate the degree to which you agree or disagree with the following statements. - I generally do not support public bonds or tax increases.","You indicated that you would not be willing to support a public bond to fund greenspace initiatives.
+
+
+Please indicate the degree to which you agree or disagree with the following statements. - I cannot afford potential increases in taxes at this time.","You indicated that you would not be willing to support a public bond to fund greenspace initiatives.
+
+
+Please indicate the degree to which you agree or disagree with the following statements. - Greenspace initiatives are not a high priority compared to other community needs.","You indicated that you would not be willing to support a public bond to fund greenspace initiatives.
+
+
+Please indicate the degree to which you agree or disagree with the following statements. - I do not believe a public bond is an effective way to fund greenspace projects.","You indicated that you would not be willing to support a public bond to fund greenspace initiatives.
+
+
+Please indicate the degree to which you agree or disagree with the following statements. - I do not trust that the funds would be used responsibly.",Which statement best reflects your views on water use?,Would you be willing to volunteer your time on a regular basis to help maintain this park at 2 hour clean-up events?,How safe do you feel when visiting your greenspace?,Which features would make you feel safer in the greenspace? (select all that apply) - Selected Choice,Which features would make you feel safer in the greenspace? (select all that apply) - Other (please specify) - Text,"Please share why you chose, or didn't choose, the safety features above:",What is your age?,How do you describe yourself? - Selected Choice,How do you describe yourself? - Prefer to self-describe - Text,"Are you of Hispanic, Latino, or Spanish origin?",What is your race? - Selected Choice,What is your race? - Other - Text,What is your US Zip Code?,"How many people live in your household, including yourself?",How many people who live in your household are under the age of 18?,For how long have you lived in Arizona?,Where would you say you are from? - Selected Choice,Where would you say you are from? - Other - Text,What type of housing do you currently live in? - Selected Choice,What type of housing do you currently live in? - Other (please specify) - Text,Which of the following best describes your role in the community? (Select all that apply) - Selected Choice,Which of the following best describes your role in the community? (Select all that apply) - Other: - Text,What is the highest level of education you have completed?,What was your total household income before taxes during the past 12 months?,Do you identify as having a disability?,Do you have any additional comments or feedback?,participantID,age,gender,householdincome
+"{""ImportId"":""startDate"",""timeZone"":""America/Denver""}","{""ImportId"":""endDate"",""timeZone"":""America/Denver""}","{""ImportId"":""status""}","{""ImportId"":""progress""}","{""ImportId"":""duration""}","{""ImportId"":""finished""}","{""ImportId"":""recordedDate"",""timeZone"":""America/Denver""}","{""ImportId"":""_recordId""}","{""ImportId"":""distributionChannel""}","{""ImportId"":""userLanguage""}","{""ImportId"":""Q_RecaptchaScore""}","{""ImportId"":""Q_DuplicateRespondent""}","{""ImportId"":""QID1""}","{""ImportId"":""QID26_FILE_ID""}","{""ImportId"":""QID26_FILE_NAME""}","{""ImportId"":""QID26_FILE_SIZE""}","{""ImportId"":""QID26_FILE_TYPE""}","{""ImportId"":""QID109""}","{""ImportId"":""QID114""}","{""ImportId"":""QID24""}","{""ImportId"":""QID1323829097""}","{""ImportId"":""QID1323829098""}","{""ImportId"":""QID1323829099""}","{""ImportId"":""QID1323829100""}","{""ImportId"":""QID1323829101""}","{""ImportId"":""QID1323829102""}","{""ImportId"":""QID1323829103""}","{""ImportId"":""QID1323829104""}","{""ImportId"":""QID1323829105""}","{""ImportId"":""QID1323829106""}","{""ImportId"":""QID1323829107""}","{""ImportId"":""QID1323829108""}","{""ImportId"":""QID1323829109""}","{""ImportId"":""QID1323829110""}","{""ImportId"":""QID1323829111""}","{""ImportId"":""QID1323829112""}","{""ImportId"":""QID1323829113""}","{""ImportId"":""QID1323829114""}","{""ImportId"":""QID121""}","{""ImportId"":""QID77_1""}","{""ImportId"":""QID77_2""}","{""ImportId"":""QID77_3""}","{""ImportId"":""QID77_4""}","{""ImportId"":""QID66""}","{""ImportId"":""QID43""}","{""ImportId"":""QID43_6_TEXT""}","{""ImportId"":""QID67""}","{""ImportId"":""QID67_8_TEXT""}","{""ImportId"":""QID106""}","{""ImportId"":""QID106_5_TEXT""}","{""ImportId"":""QID54""}","{""ImportId"":""QID69_1""}","{""ImportId"":""QID69_2""}","{""ImportId"":""QID69_3""}","{""ImportId"":""QID69_4""}","{""ImportId"":""QID69_5""}","{""ImportId"":""QID52""}","{""ImportId"":""QID150""}","{""ImportId"":""QID57""}","{""ImportId"":""QID60""}","{""ImportId"":""QID60_5_TEXT""}","{""ImportId"":""QID116_TEXT""}","{""ImportId"":""QID4_TEXT""}","{""ImportId"":""QID3""}","{""ImportId"":""QID3_4_TEXT""}","{""ImportId"":""QID6""}","{""ImportId"":""QID5""}","{""ImportId"":""QID5_6_TEXT""}","{""ImportId"":""QID10_TEXT""}","{""ImportId"":""QID148_TEXT""}","{""ImportId"":""QID149_TEXT""}","{""ImportId"":""QID36""}","{""ImportId"":""QID117""}","{""ImportId"":""QID117_51_TEXT""}","{""ImportId"":""QID47""}","{""ImportId"":""QID47_7_TEXT""}","{""ImportId"":""QID11""}","{""ImportId"":""QID11_8_TEXT""}","{""ImportId"":""QID8""}","{""ImportId"":""QID9""}","{""ImportId"":""QID14""}","{""ImportId"":""QID108_TEXT""}","{""ImportId"":""participantID""}","{""ImportId"":""age""}","{""ImportId"":""gender""}","{""ImportId"":""householdincome""}"
+2026-06-25 13:30:14,2026-06-25 13:32:15,0,100,120,1,2026-06-25 13:32:16,R_6rMRBO16zyuKrrw,anonymous,EN,1,,1,F_2S7eTG1uQewen97,signature.png,3967,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2026-06-25 15:10:48,2026-06-25 15:11:44,0,100,55,1,2026-06-25 15:11:45,R_7cIYPuuqnoawYtX,anonymous,EN,0.800000011920929,,1,F_293PcnAvVnG006q,signature.png,4040,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pfa844195,76,male,"$85,000 to $114,999"
+2026-06-25 22:31:09,2026-06-25 22:36:55,0,100,346,1,2026-06-25 22:36:56,R_5hYAHTkIisF8fwS,anonymous,EN,0.800000011920929,,1,F_81gyt22Hv9HRcOt,signature.png,14268,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pbb78b600,59,female,"$85,000 to $114,999"
+2026-06-25 22:27:35,2026-06-25 22:41:06,0,100,810,1,2026-06-25 22:41:07,R_5HjKJJG1P22RSZy,anonymous,EN,1,,1,F_xx49kr9Y2c9F19n,signature.png,5264,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,1,2,2,,4,3,4,4,3,3,,"1,2",,"1,3",,1,,,,,,,,2,,,,76,1,,2,1,,85381,2,0,6,,,2,,1,,5,3,2,,pb8e8c4b9,77,male,"$40,000 to $59,999"
+2026-06-25 22:46:10,2026-06-25 22:47:50,0,100,99,1,2026-06-25 22:47:51,R_6hioNbe2m3aFU0V,anonymous,EN,1,,1,F_09buvl7gjejBvJD,signature.png,7164,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pfc379ee3,69,male,"$60,000 to $84,999"
+2026-06-25 22:51:48,2026-06-25 22:58:20,0,100,392,1,2026-06-25 22:58:21,R_7egZP5Gd6M13MMp,anonymous,EN,0.8999999761581421,,1,F_2ydOu8mSt1EV00S,signature.png,7513,image/png,1,1,2,,,,,,,,,,2,1,1,1,2,1,1,2,2,4,5,2,4,4,2,1,,"3,6",,"3,4",,2,3,4,4,2,4,2,,3,,,,19,2,,2,4,,85742,2,0,3,3,,1,,9,,3,2,2,"nope ",pae2bef02,19,female,"$25,000 to $39,999"
+2026-06-25 22:47:53,2026-06-25 22:59:38,0,100,705,1,2026-06-25 22:59:39,R_7XPgWhNVFc7isFj,anonymous,EN,1,,1,F_27U5M71Glr0y0NT,signature.png,5897,image/png,1,1,2,4,2,1,2,2,1,1,2,2,,,,,,,,,,,4,3,3,4,1,3,,"1,5,7",,3,,1,,,,,,,,2,,,,59,1,,2,1,,85204,3,0,6,,,2,,1,,3,5,2,,pd21c05f5,60,male,"$115,000 to $149,999"
+2026-06-25 23:31:38,2026-06-25 23:40:40,0,100,541,1,2026-06-25 23:40:41,R_3sNFKIsF0I2JJO9,anonymous,EN,0.800000011920929,,1,F_3kB5ozdLecUE3vQ,signature.png,8139,image/png,1,1,2,4,1,1,2,2,2,1,2,2,,,,,,,,,,4,4,3,3,4,4,"2,3",,"1,2",,"1,3",,2,4,5,3,2,3,2,,2,,,,18,1,,2,1,,85282,3,0,6,,,2,,1,,1,3,2,Nope,pa7293893,19,male,"$40,000 to $59,999"
+2026-06-27 21:49:07,2026-06-27 21:49:47,0,100,39,1,2026-06-27 21:49:48,R_5QL65cfmOt67JHq,anonymous,EN,1,,1,F_r9lfhlxmcnXs8iB,signature.png,3894,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pbb824d5b,43,male,"$85,000 to $114,999"
+2026-06-27 23:04:42,2026-06-27 23:11:09,0,100,387,1,2026-06-27 23:11:10,R_6OPzNZBzanW6shq,anonymous,EN,1,,1,F_338gqpMmuWA039H,signature.png,6946,image/png,1,1,2,2,2,2,1,2,2,1,2,1,,,,,,,,,,,4,2,3,4,3,"1,2,3",,"1,2,3,4",,"1,3",,1,,,,,,,,2,,,,29,2,,2,1,,85710,3,1,6,,,1,,1,,1,3,5,,pfacd8a4a,30,female,"$60,000 to $84,999"
+2026-06-27 23:20:05,2026-06-27 23:28:01,0,100,475,1,2026-06-27 23:28:02,R_5lY79cjhWFc2iYN,anonymous,EN,0.30000001192092896,,1,F_2wglOehwG4k7ss0,signature.png,9320,image/png,1,1,2,,,,,,,,,,1,2,1,2,1,2,2,1,1,4,4,3,4,5,2,"1,2,3",,"1,2,3,4",,"2,3,4",,1,,,,,,,,2,,,,20,2,,1,6,"Mexican ",85122,2,0,6,,,1,,1,,3,2,2,This survey went well and I hope there's a park actually opening up .,pd5e033ee,21,female,"$25,000 to $39,999"
+2026-06-28 03:34:19,2026-06-28 03:51:25,0,100,1026,1,2026-06-28 03:51:26,R_6IcrZAYweW8m7VJ,anonymous,EN,0.8999999761581421,,1,F_ZkLH81rYoRsAohj,signature.png,11520,image/png,1,1,2,2,2,1,2,2,2,1,2,2,,,,,,,,,,,4,3,4,4,1,3,,5,,"3,4",,1,,,,,,,,2,,,,80,1,,2,1,,85206,2,0,6,,,1,,1,,5,4,1,no,pb5e2b386,80,male,"$85,000 to $114,999"
+2026-06-28 04:35:30,2026-06-28 04:46:31,0,100,660,1,2026-06-28 04:46:32,R_1HkSN8blOE7ICwy,anonymous,EN,1,,1,F_3kdjzlt7uoOmyCR,signature.png,9571,image/png,1,1,2,2,2,2,2,2,2,1,2,2,,,,,,,,,,,5,1,3,5,1,"1,2",,"1,2,3",,"1,3",,1,,,,,,,,1,,,,52,2,,2,"1,3",,85120,1,0,6,,,2,,2,,2,2,2,"Nothing ",pfc0b272c,53,female,"$25,000 to $39,999"
+2026-06-28 04:51:50,2026-06-28 04:57:31,0,100,340,1,2026-06-28 04:57:32,R_6R2fRZjpgU4Svx7,anonymous,EN,0.800000011920929,,1,F_24Cqonc6zCQdjCy,signature.png,4803,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,1,1,2,4,4,2,2,4,1,3,,"2,3,4",,3,,2,4,5,4,4,4,2,,4,,,I would choose all safety features as I think they are all necessary.,23,2,,2,4,,85719,2,0,2,51,Canada,2,,9,,6,4,2,,pc0fc6b5c,24,female,"$60,000 to $84,999"
+2026-06-28 05:33:05,2026-06-28 05:47:49,0,100,883,1,2026-06-28 05:47:50,R_3K7MUdOFGFxkuH6,anonymous,EN,1,,1,F_XtCFufAh3UofIn7,signature.png,7006,image/png,1,1,2,2,2,1,1,2,2,1,2,2,,,,,,,,,,,5,2,5,5,2,"1,2",,"2,3,4",,"1,2,3,4",,1,,,,,,,,1,,,,42,2,,2,3,,85304,7,2,6,,,1,,3,,2,4,2,I think I like the green space plan…,pc5423490,43,female,"$85,000 to $114,999"
+2026-06-28 07:05:06,2026-06-28 07:06:07,0,100,60,1,2026-06-28 07:06:08,R_5qdM9FqNphx7nMt,anonymous,EN,0.800000011920929,,1,F_sGrXOBXu2YuR5Gp,signature.png,7900,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pbdbe5d06,66,female,"$40,000 to $59,999"
+2026-06-28 09:44:08,2026-06-28 09:51:34,0,100,446,1,2026-06-28 09:51:36,R_14MJcOzxt9Cs3Pb,anonymous,EN,0.30000001192092896,,1,F_3O8Iy0lsYqOjhCR,signature.png,7722,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,1,2,1,4,5,1,4,5,2,1,,1,,3,,1,,,,,,,,1,,,,61,2,,2,1,,85381,1,0,4,13,,2,,1,,5,3,2,"None ",pddb9ca81,61,female,"$40,000 to $59,999"
+2026-06-28 09:57:13,2026-06-28 10:05:51,0,100,518,1,2026-06-28 10:05:52,R_6KoT1hjtq8FdZtu,anonymous,EN,1,,1,F_3lLBQ7N1PVa7SXG,signature.png,6809,image/png,1,1,2,2,2,1,2,2,2,1,2,2,,,,,,,,,,,4,5,4,5,3,"1,3",,"1,4",,"1,3",,1,,,,,,,,1,,,,24,1,,2,6,"Multiracial ",85701,4,0,6,,,1,,1,,5,5,2,"I thought this survey was very thoughtful and interesting ",pcaa36046,25,male,"$115,000 to $149,999"
+2026-06-28 10:02:08,2026-06-28 10:08:11,0,100,363,1,2026-06-28 10:08:12,R_1WVjVaybzPjIpDb,anonymous,EN,1,,1,F_33CmjDiD76qXQfX,signature.png,5852,image/png,1,1,4,4,1,1,1,2,1,1,2,2,,,,,,,,,,,5,2,4,5,2,3,,"1,2,3,4,5",,"1,2,3,4",,1,,,,,,,,1,,,,64,2,,2,1,,85281,1,0,6,,,3,,"1,3",,5,1,2,"No, thank you. ",pfdb30d47,64,female,"$10,000 to $24,999"
+2026-06-28 10:02:29,2026-06-28 10:10:12,0,100,463,1,2026-06-28 10:10:13,R_5Tw5Ty2WzeHO2Lp,anonymous,EN,1,,1,F_33pDySNDeb1RcQt,signature.png,4887,image/png,1,1,2,2,2,1,2,2,2,1,1,2,,,,,,,,,,,3,2,4,4,3,"1,3",,"1,2,3,4",,"1,3,4",,1,,,,,,,,2,,,,30,2,,2,2,,85711,5,4,6,,,2,,1,,2,2,2,No,pf7da1a7e,30,female,"$25,000 to $39,999"
+2026-06-28 10:01:28,2026-06-28 10:12:27,0,100,658,1,2026-06-28 10:12:28,R_3mdT1LuQ8WxMXui,anonymous,EN,1,,1,F_21zl5e7zcZNuuRQ,signature.png,3807,image/png,1,1,2,,,,,,,,,,2,2,1,2,2,1,2,1,2,4,5,5,5,5,4,"2,3",,"2,3,4,6",,"1,3,4",,1,,,,,,,,1,,,,28,1,,1,1,,86409,4,1,3,3,,1,,1,,5,4,2,,pc1f9b74b,29,male,"$85,000 to $114,999"
+2026-06-28 10:00:39,2026-06-28 10:13:10,0,100,750,1,2026-06-28 10:13:11,R_5V9kAjtT9sLZfgJ,anonymous,EN,1,,1,F_21iDhuZahUZ5EVr,signature.png,5364,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,2,2,2,4,5,1,5,5,2,"1,2",,"1,3",,"3,4",,1,,,,,,,,2,,,,28,3,,1,2,,85226,1,0,6,,,2,,1,,2,2,2,,pc6386690,28,female,"$25,000 to $39,999"
+2026-06-28 10:10:01,2026-06-28 10:14:01,0,100,239,1,2026-06-28 10:14:02,R_1LbHFIktHawpJjb,anonymous,EN,0.800000011920929,,1,F_2V3kBEwj3Lzl9uO,signature.png,5308,image/png,1,1,4,,,,,,,,,,1,1,2,1,2,1,2,1,2,4,4,3,4,5,5,"1,3,4",,"1,4,5",,"1,2",,1,,,,,,,,1,,,,26,1,,2,1,,85020,1,0,6,,,1,,"1,3,5",,5,2,2,This is great I love my community,paf115179,27,male,"$60,000 to $84,999"
+2026-06-28 10:04:23,2026-06-28 10:14:12,0,100,588,1,2026-06-28 10:14:13,R_5MKznTH3JtjNrKp,anonymous,EN,0.800000011920929,,1,F_r0bqpjk8BlPLmoh,signature.png,9435,image/png,1,1,4,,,,,,,,,,1,2,2,2,1,1,2,1,2,4,3,4,4,5,2,1,,5,,3,,1,,,,,,,,2,,,,37,2,,2,1,,85308,2,0,6,,,1,,1,,3,2,5,No other feedback.,pfbbac23c,37,female,"$25,000 to $39,999"
+2026-06-28 10:06:51,2026-06-28 10:15:08,0,100,497,1,2026-06-28 10:15:09,R_5BerzibOvFXGj5f,anonymous,EN,1,,1,F_2TUaK9pbqLSxOMd,signature.png,7105,image/png,1,1,2,2,2,1,2,2,2,1,2,2,,,,,,,,,,,3,3,3,4,2,3,,"3,5",,"2,3,4",,2,4,4,4,2,5,4,,3,,,,39,2,,2,1,,85710,3,0,6,,,1,,1,,4,3,2,,pcbac9a8f,40,female,"$60,000 to $84,999"
+2026-06-28 10:19:27,2026-06-28 10:21:02,0,100,94,1,2026-06-28 10:21:03,R_6uWpeHXiD29wlgt,anonymous,EN,1,,1,F_3MnfwS1gboPWGjo,signature.png,7111,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pdbf0c0b8,21,male,"$85,000 to $114,999"
+2026-06-28 10:20:09,2026-06-28 10:27:09,0,100,420,1,2026-06-28 10:27:11,R_7TvGVbcAXFAQdau,anonymous,EN,1,,1,F_3Gvln2h5TTMDNlB,signature.png,7113,image/png,1,1,4,,,,,,,,,,2,1,1,1,2,1,1,2,1,4,5,1,5,5,3,"1,3",,"1,2,3,4",,"1,3",,1,,,,,,,,1,,,,23,2,,2,2,,85345,5,3,6,,,1,,"1,3",,3,2,2,,pffce2394,23,female,"$40,000 to $59,999"
+2026-06-28 10:24:20,2026-06-28 10:28:56,0,100,276,1,2026-06-28 10:28:57,R_10BflWi3p04CQc9,anonymous,EN,0.800000011920929,,1,F_D7utvEhzqpfZdeh,signature.png,8302,image/png,1,1,4,2,1,1,1,2,2,1,2,2,,,,,,,,,,,3,3,3,3,1,1,,"1,3",,"1,3,4",,1,,,,,,,,3,,,,34,2,,2,"1,2",,85021,3,1,4,10,,2,,5,,2,1,5,"No comment ",pcf007272,35,female,"Less than $9,999"
+2026-06-28 10:20:15,2026-06-28 10:30:02,0,100,587,1,2026-06-28 10:30:03,R_3CgrInSQZOQbLcM,anonymous,EN,0.8999999761581421,,1,F_32WTGk5U6kHmkS5,signature.png,9780,image/png,1,1,4,4,1,1,2,2,1,1,2,2,,,,,,,,,,,4,2,3,5,4,1,,"1,3",,1,,1,,,,,,,,1,,,,59,1,,2,1,,85737,2,0,6,,,1,,1,,6,6,2,,pf9eb43aa,60,male,"$150,000 to $199,999"
+2026-06-28 10:19:01,2026-06-28 10:30:17,0,100,675,1,2026-06-28 10:30:18,R_3NRxNxSVTyOnf7X,anonymous,EN,1,,1,F_1P1WOLW1GENC7k0,signature.png,8776,image/png,1,1,2,2,1,2,2,2,2,1,1,2,,,,,,,,,,,4,4,4,4,1,3,,5,,4,,2,3,4,3,4,2,2,,1,,,,77,2,,2,1,,86210,1,0,6,,,2,,1,,6,2,2,No,pfb579a5a,78,female,"$25,000 to $39,999"
+2026-06-28 10:21:03,2026-06-28 10:30:36,0,100,573,1,2026-06-28 10:30:38,R_7MMx5h2AYZh8PG7,anonymous,EN,0.8999999761581421,,1,F_3nARvKfqH6jW2gh,signature.png,7199,image/png,1,1,4,,,,,,,,,,2,2,1,2,2,1,1,1,2,4,4,4,4,5,2,1,,1,,3,,1,,,,,,,,1,,,,58,1,,2,1,,85712,1,0,6,,,1,,9,,5,3,3,,pcd49e4a7,58,male,"$60,000 to $84,999"
+2026-06-28 10:19:48,2026-06-28 10:30:54,0,100,665,1,2026-06-28 10:30:55,R_3PhQ1ex7q3Xtg5U,anonymous,EN,0.800000011920929,,1,F_12L08cqM5lBb4JB,signature.png,9588,image/png,1,1,2,,,,,,,,,,2,1,2,2,2,1,1,1,2,4,1,1,4,4,2,3,,"2,4",,"3,4",,1,,,,,,,,1,,,,59,2,,2,1,,85719,2,0,6,,,3,,1,,3,2,1,,pdca9ed23,60,female,"$25,000 to $39,999"
+2026-06-28 10:32:04,2026-06-28 10:34:00,0,100,115,1,2026-06-28 10:34:01,R_1FR9jBnb5BjCIkk,anonymous,EN,0.8999999761581421,,1,F_1LBehvfiD5A56Ni,signature.png,7575,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pf84a0a02,54,female,"$60,000 to $84,999"
+2026-06-28 10:27:28,2026-06-28 10:37:30,0,100,602,1,2026-06-28 10:37:32,R_1QB1gwMkor3kbEI,anonymous,EN,1,,1,F_3MQBgu4s1M6sZLy,signature.png,6840,image/png,1,1,2,2,2,1,2,2,1,1,2,2,,,,,,,,,,,5,5,4,4,2,3,,"1,3",,"1,3",,1,,,,,,,,2,,,,50,2,,1,1,,85173,3,0,6,,,1,,"1,3",,3,2,2,"No feedback ",pbde2f34b,51,female,"$40,000 to $59,999"
+2026-06-28 10:27:17,2026-06-28 10:37:34,0,100,616,1,2026-06-28 10:37:35,R_5I5HkQ5QebPRnVQ,anonymous,EN,0.800000011920929,,1,F_32Wu74WOGq1IowE,signature.png,3676,image/png,1,1,2,2,2,1,2,2,2,1,1,2,,,,,,,,,,,4,3,3,4,3,3,,1,,"1,3,4",,1,,,,,,,,1,,,,41,1,,2,1,,85015,3,1,6,,,5,,1,,2,1,5,Pretty good,paa31a17e,41,male,"$10,000 to $24,999"
+2026-06-28 10:27:56,2026-06-28 10:56:50,0,100,1733,1,2026-06-28 10:56:52,R_6H7axMKtqs4kJb4,anonymous,EN,1,,1,F_27QmxdPpNX0KXmV,signature.png,9087,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,2,2,1,4,3,2,5,4,1,"4,6",Ride from roomate,5,,4,,2,4,5,2,4,3,3,,2,,,,39,2,,2,1,,85706,2,0,4,5,,6,,1,,3,4,2,"Not at this time ",pafadfbec,40,female,"$40,000 to $59,999"
+2026-06-28 10:58:43,2026-06-28 11:06:26,0,100,462,1,2026-06-28 11:06:27,R_5GcRxYtuy03mUBn,anonymous,EN,0.800000011920929,,1,F_pzJw2gUZUHql3Pj,signature.png,4746,image/png,1,1,2,,,,,,,,,,1,2,2,2,2,1,1,1,2,4,4,1,5,5,2,"1,4",,"1,3,4",,"1,3",,1,,,,,,,,1,,,,36,1,,1,1,,85208,5,0,4,5,,6,,1,,3,2,2,Very well designed survey.,pa29463c9,37,male,"$25,000 to $39,999"
+2026-06-28 11:00:40,2026-06-28 11:06:33,0,100,352,1,2026-06-28 11:06:34,R_6WUAVeYNoBlkI9R,anonymous,EN,0.6000000238418579,,1,F_2S31uv2onfuX3ZH,signature.png,6858,image/png,1,1,2,2,2,1,2,1,1,1,1,2,,,,,,,,,,,5,3,4,1,3,1,,"2,3,5",,"1,2,3",,1,,,,,,,,2,,,,29,2,,2,1,,85630,4,2,6,,,1,,9,,2,2,"4,2","It was a great serve that offered a lot of information ",pcfca1bfe,30,female,"$25,000 to $39,999"
+2026-06-28 11:00:43,2026-06-28 11:06:35,0,100,352,1,2026-06-28 11:06:36,R_5hrOUzzZwK9EmkW,anonymous,EN,1,,1,F_1rkTbvxTfCK4STw,signature.png,6544,image/png,1,1,2,,,,,,,,,,2,1,2,2,2,1,1,2,2,4,5,4,4,5,2,"1,2,3",,"2,3",,3,,1,,,,,,,,3,,,,39,2,,2,1,,85625,2,0,4,22,,1,,1,,3,1,1,Fun survey,pcbd14145,40,female,"Less than $9,999"
+2026-06-28 10:59:14,2026-06-28 11:09:02,0,100,587,1,2026-06-28 11:09:03,R_6IXFg0mcyNXVFjb,anonymous,EN,1,,1,F_2ZWkycgl1jRN9Pm,signature.png,5466,image/png,1,1,4,4,1,1,2,2,1,2,1,2,,,,,,,,,,,4,5,4,3,1,2,,"2,3",,"1,3",,1,,,,,,,,1,,,,56,2,,2,1,,85248,2,0,6,,,1,,1,,5,2,2,,pf1c6a43d,56,female,"$40,000 to $59,999"
+2026-06-28 10:59:56,2026-06-28 11:09:40,0,100,584,1,2026-06-28 11:09:41,R_5TIkEioMP8m8mhX,anonymous,EN,0.8999999761581421,,1,F_1FgElT6i9NoV27p,signature.png,7461,image/png,1,1,4,,,,,,,,,,1,2,2,1,2,2,2,2,2,4,4,4,4,5,3,3,,"2,3,5",,"2,3,5",walking,1,,,,,,,,3,,,,68,2,,2,1,,85622,2,0,4,13,,3,,1,,3,5,2,This was a great survey. Thank You.,pb0bb2cb2,68,female,"$115,000 to $149,999"
+2026-06-28 10:58:26,2026-06-28 11:16:03,0,100,1057,1,2026-06-28 11:16:04,R_3dYfutc8S137oLC,anonymous,EN,0.800000011920929,,1,F_23W7HikeRs4B0L6,signature.png,9035,image/png,1,1,4,2,2,2,2,2,1,1,1,2,,,,,,,,,,,4,4,5,5,3,3,,"2,3,4,7",,3,,1,,,,,,,,1,,,,38,1,,1,6,Mexican American,85749,4,2,3,13,,1,,3,,5,4,2,Fun Survey,pf96e4df4,42,male,"$85,000 to $114,999"
+2026-06-28 11:02:25,2026-06-28 11:18:54,0,100,989,1,2026-06-28 11:18:55,R_7dWlsYg4CRiU1hL,anonymous,EN,0.8999999761581421,,1,F_3kLhl1rNcJfCGco,signature.png,8253,image/png,1,1,2,2,1,2,1,2,2,1,2,2,,,,,,,,,,,4,2,4,5,1,"1,2,3",,8,I don't live in Tucson,5,I don't live in Tucson.,1,,,,,,,,2,,,,44,2,,2,1,,85120,2,0,4,49,,1,,1,,4,2,2,"This survey was ok, but I don't live near Tucson at all.",pdb0a3c9a,45,female,"$10,000 to $24,999"
+2026-06-28 11:21:16,2026-06-28 11:22:30,0,100,73,1,2026-06-28 11:22:31,R_1LM3XEuspahuHbB,anonymous,EN,1,,1,F_30nO4mF6zaKnkJw,signature.png,8595,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pd2ae8227,64,female,"$40,000 to $59,999"
+2026-06-28 11:20:15,2026-06-28 11:32:40,0,100,745,1,2026-06-28 11:32:41,R_6KuzSr7VhaBa3gm,anonymous,EN,1,,1,F_3imwH6DJQTomTeA,signature.png,7621,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,1,2,2,4,4,4,4,4,4,"1,3",,"1,2,4",,"3,4",,1,,,,,,,,2,,,,71,1,,2,1,,85756,2,0,3,38,,1,,"1,3",,4,4,2,,pb788bf13,71,male,"$60,000 to $84,999"
+2026-06-28 11:24:28,2026-06-28 11:35:13,0,100,645,1,2026-06-28 11:35:14,R_7Mtn6V7uIdH4FVL,anonymous,EN,1,,1,F_wYNM2Jv5wqwHUUV,signature.png,7877,image/png,1,1,2,2,2,1,2,2,2,1,2,2,,,,,,,,,,,3,1,3,4,2,3,,1,,"3,4",,1,,,,,,,,2,,,,40,2,,2,1,,85706,4,2,6,,,6,,1,,2,2,2,"The best park would have patrol, night lighting, play areas, walkable and handicapped accessible areas, gathering spaces. ",pf9112d88,41,female,"$25,000 to $39,999"
+2026-06-28 11:31:00,2026-06-28 11:39:00,0,100,480,1,2026-06-28 11:39:02,R_5DwlJobu8IMkhHl,anonymous,EN,1,,1,F_x45teuF18PHTSaR,signature.png,8411,image/png,1,1,2,,,,,,,,,,2,1,2,1,2,1,2,2,1,4,3,4,3,4,1,1,,3,,1,,1,,,,,,,,2,,,,65,1,,2,1,,85310,2,0,6,,,1,,1,,6,2,2,No,pb5a2354b,65,male,"$40,000 to $59,999"
+2026-06-28 11:22:32,2026-06-28 11:43:26,0,100,1254,1,2026-06-28 11:43:27,R_5qkqWlTAg9VUkcK,anonymous,EN,1,,1,F_1mrNSPhjvFVHmZJ,signature.png,8684,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,1,2,1,4,4,2,2,4,7,3,,"1,4,6,7",,"3,4",,1,,,,,,,,2,,,,32,1,,2,1,,85701,2,0,3,13,,1,,3,,3,4,2,No the survey was actually better than most I see,paf1a5212,32,male,"$60,000 to $84,999"
+2026-06-28 11:35:49,2026-06-28 11:44:15,0,100,506,1,2026-06-28 11:44:17,R_11gmlwzFxQV3zAY,anonymous,EN,0.8999999761581421,,1,F_VVTpUl3MgMhIJBT,signature.png,14448,image/png,1,1,2,2,2,2,2,2,2,1,2,2,,,,,,,,,,,4,3,4,4,2,3,,"1,2",,"3,4",,1,,,,,,,,2,,,,80,2,,2,1,,85120,1,0,6,,,1,,9,,4,3,2,NO,paa7478be,80,female,"$40,000 to $59,999"
+2026-06-28 11:46:07,2026-06-28 11:47:35,0,100,87,1,2026-06-28 11:47:36,R_62hSl0XzfffuqGX,anonymous,EN,1,,1,F_2SrdCuo7UlAxsFs,signature.png,6542,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pc0c3c2a6,75,female,"$40,000 to $59,999"
+2026-06-28 11:39:36,2026-06-28 11:48:08,0,100,512,1,2026-06-28 11:48:09,R_1fjMAvmgDrdNL1h,anonymous,EN,1,,1,F_2eQoh91QGACKGbn,signature.png,8359,image/png,1,1,4,4,1,1,2,2,1,1,1,2,,,,,,,,,,,4,3,3,4,2,"1,2,3",,"1,5",,"1,3,4",,1,,,,,,,,1,,,,53,1,,2,4,,85701,1,0,6,,,1,,1,,5,3,2,,pd54aec22,54,male,"$60,000 to $84,999"
+2026-06-28 11:46:50,2026-06-28 11:48:25,0,100,94,1,2026-06-28 11:48:26,R_1mk7Ty8PXYPtm1K,anonymous,EN,1,,1,F_9tRzMs3oXkUuUsp,signature.png,7646,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pce035761,52,female,"$40,000 to $59,999"
+2026-06-28 11:45:37,2026-06-28 11:50:59,0,100,321,1,2026-06-28 11:51:00,R_1ts4XbuDXto1C8A,anonymous,EN,1,,1,F_3lE3VWky1xe14IZ,signature.png,7192,image/png,1,1,2,,,,,,,,,,2,2,1,2,2,1,1,2,1,4,5,3,4,3,5,"1,2,4,5",,"1,2,7",,1,,2,5,3,4,5,4,1,,1,,,,21,1,,2,2,,85040,1,0,6,,,1,,1,,2,2,2,,pa07c0136,21,male,"$25,000 to $39,999"
+2026-06-28 10:01:35,2026-06-28 11:51:09,0,100,6573,1,2026-06-28 11:51:10,R_7CWnIXYKdDceBk3,anonymous,EN,1,,1,F_p5wEQ7Yt578H9Pb,signature.png,8222,image/png,1,1,4,,,,,,,,,,2,2,1,2,2,1,1,2,2,4,4,2,3,4,1,3,,8,none,2,,2,4,2,4,4,4,1,,2,,,,81,1,,2,1,,85331,2,0,6,,,1,,8,none,6,5,2,none,pdf5dd555,81,male,"$115,000 to $149,999"
+2026-06-28 11:48:47,2026-06-28 11:53:42,0,100,295,1,2026-06-28 11:53:44,R_7GNgx7gRF3C7ceA,anonymous,EN,1,,1,F_b8dY3r84Yyp3wVb,signature.png,4216,image/png,1,1,2,2,2,2,2,2,2,1,2,1,,,,,,,,,,,5,4,5,5,1,3,,1,,3,,1,,,,,,,,2,,,,20,2,,1,6,"mexicano ",85335,3,0,3,3,,2,,1,,2,2,2,"i liked the questions about the parks ",pcc3cb4c6,21,female,"$60,000 to $84,999"
+2026-06-28 11:49:42,2026-06-28 12:01:36,0,100,714,1,2026-06-28 12:01:37,R_3zxifUFBiLse4JH,anonymous,EN,1,,1,F_R5oKB37gfTUEMYF,signature.png,4313,image/png,1,1,2,,,,,,,,,,2,2,1,2,2,1,1,1,1,4,5,1,5,5,3,"1,2,3,4,5",,"1,2,3,4",,"1,2,3,4",,1,,,,,,,,2,,,,35,2,,2,4,,85193,2,0,3,3,,1,,1,,3,2,2,"Helpful survey ",pfcb42301,35,female,"$40,000 to $59,999"
+2026-06-28 12:01:40,2026-06-28 12:18:07,0,100,987,1,2026-06-28 12:18:09,R_3wsq8ASinWPHggq,anonymous,EN,0.4000000059604645,,1,F_10Na1OqRwGg4jpo,signature.png,7881,image/png,1,1,2,2,2,1,2,2,1,1,2,2,,,,,,,,,,,4,4,3,5,1,5,,3,,1,,2,1,5,4,2,3,3,,4,,,"I don't think that a patrol is 100% necessary, but lighting is a basic and needed safety measure",24,3,,2,1,,85027,8,3,6,,,1,,1,,3,2,2,,pae99f776,24,male,"$25,000 to $39,999"
+2026-06-28 12:00:22,2026-06-28 12:20:14,0,100,1192,1,2026-06-28 12:20:15,R_5LZ09nDe6JRPOdc,anonymous,EN,0.8999999761581421,,1,F_2rkonrvfOXfjhEq,signature.png,5590,image/png,1,1,2,2,2,2,1,2,2,1,1,2,,,,,,,,,,,5,1,5,5,3,3,,"1,2,5,7",,"3,5","Use my wheelchair ",1,,,,,,,,1,,,,72,1,,2,1,,85737,2,0,6,,,1,,1,,6,6,1,We need these parks.,pb76720e1,72,male,"$200,000 or more"
+2026-06-28 12:03:24,2026-06-28 12:25:28,0,100,1323,1,2026-06-28 12:25:29,R_5KD9yXzLpNAyDqc,anonymous,EN,0.8999999761581421,,1,F_1exTxC7Pv3IP94R,signature.png,9240,image/png,1,1,4,,,,,,,,,,2,1,1,1,1,1,2,2,2,4,4,4,5,5,2,3,,"2,7",,"3,4",,1,,,,,,,,3,,,,67,2,,2,1,,85208,2,0,6,,,1,,9,,5,2,2,,pcd301851,67,female,"$25,000 to $39,999"
+2026-06-28 11:44:21,2026-06-28 12:28:24,0,100,2642,1,2026-06-28 12:28:25,R_74B4LJ74LuWRwf5,anonymous,EN,0.8999999761581421,,1,F_ZkjixXemCR1NHz3,signature.png,8392,image/png,1,1,2,,,,,,,,,,1,2,2,2,2,1,1,1,2,4,2,1,5,1,1,4,,8,none,"3,4",,1,,,,,,,,1,,,,54,1,,2,1,,85282,1,0,6,,,2,,1,,3,1,1,,pd6571399,54,male,"$10,000 to $24,999"
+2026-06-28 13:09:35,2026-06-28 13:16:45,0,100,430,1,2026-06-28 13:16:46,R_1VaTpqXbTaNadLQ,anonymous,EN,1,,1,F_3m9aOo9lekkTbLd,signature.png,8546,image/png,1,1,2,,,,,,,,,,2,1,1,2,2,1,1,2,1,4,4,3,4,4,3,"1,3",,"1,7",,"1,3,4",,1,,,,,,,,1,,,,42,1,,2,1,,85345,1,0,6,,,1,,1,,3,4,2,,pa523f301,43,male,"$85,000 to $114,999"
+2026-06-28 13:21:43,2026-06-28 13:30:42,0,100,538,1,2026-06-28 13:30:43,R_74CbNssuyzfYS66,anonymous,EN,1,,1,F_5hhIGN56w06MbLz,signature.png,5780,image/png,1,1,2,2,2,1,2,1,1,1,2,2,,,,,,,,,,,1,4,1,4,2,3,,1,,"1,3,4",,1,,,,,,,,1,,,,25,1,,2,1,,85008,2,1,4,3,,2,,1,,2,2,2,"That kids should feel safe in a space ",pd7648700,26,male,"$40,000 to $59,999"
+2026-06-28 13:22:42,2026-06-28 13:35:17,0,100,754,1,2026-06-28 13:35:18,R_7BJzlf7iKghdGfv,anonymous,EN,1,,1,F_12tBeff26Sf1SVI,signature.png,10424,image/png,1,1,4,,,,,,,,,,2,2,1,2,2,1,1,1,2,4,5,1,5,5,2,"1,3",,"1,3,6",,"1,3",,2,5,5,3,1,5,2,,1,,,,27,2,,2,4,,85757,4,0,6,,,1,,1,,6,4,2,"Excellent! ",pd79f99ac,28,male,"$85,000 to $114,999"
+2026-06-28 16:01:12,2026-06-28 16:09:56,0,100,523,1,2026-06-28 16:09:57,R_5F9BEO00h2lvY4p,anonymous,EN,0.8999999761581421,,1,F_2eaFdLa5vhSJkBb,signature.png,4458,image/png,1,1,2,2,1,1,2,1,1,2,2,1,,,,,,,,,,,4,3,4,5,6,3,,"2,3,5",,"1,2,3,4",,1,,,,,,,,2,,,,55,1,,1,1,,85037,3,0,6,,,1,,1,,3,3,2,,pc65cfc8d,56,male,"$40,000 to $59,999"
+2026-06-28 16:18:45,2026-06-28 16:28:31,0,100,586,1,2026-06-28 16:28:33,R_7s07UNyFFWeI3Io,anonymous,EN,1,,1,F_1luiz5UQwufk21v,signature.png,6239,image/png,1,1,2,,,,,,,,,,2,1,1,1,2,1,1,1,1,4,4,3,4,5,3,"1,2",,"1,3",,1,,1,,,,,,,,2,,,,63,1,,1,1,,85388,2,0,6,,,1,,1,,5,4,2,I don’t know how important the mix of plants between native and others really affects parks.,pd6e767c1,64,male,"$85,000 to $114,999"
+2026-06-28 18:02:19,2026-06-28 18:03:17,0,100,57,1,2026-06-28 18:03:18,R_3cSd9uXTwNgVqql,anonymous,EN,0.8999999761581421,,1,F_3OfcqwxdDLnuMNc,signature.png,6214,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pf6ef2bc2,70,female,"$25,000 to $39,999"
+2026-06-28 18:28:09,2026-06-28 18:35:00,0,100,411,1,2026-06-28 18:35:01,R_3fqKtWGYA4E3iO4,anonymous,EN,0.800000011920929,,1,F_1hMuzp4HN3lgaLq,signature.png,8679,image/png,1,1,4,2,1,1,2,2,1,1,2,2,,,,,,,,,,,5,2,4,4,3,3,,1,,1,,1,,,,,,,,1,,,,67,1,,2,1,,85730,1,0,6,,,1,,1,,5,4,2,,pc7041ed5,67,male,"$60,000 to $84,999"
+2026-06-28 18:44:04,2026-06-28 18:56:37,0,100,753,1,2026-06-28 18:56:38,R_5s0wHe5hHTqaBTd,anonymous,EN,1,,1,F_2UW3FvcAixP7MoK,signature.png,8375,image/png,1,1,4,,,,,,,,,,2,1,1,2,1,1,1,1,2,4,4,3,4,5,4,"2,3",,"1,2,3,6",,"1,3",,1,,,,,,,,1,,,,21,3,,2,1,,85641,4,1,4,3,,1,,1,,4,4,2,I have nothing else to add.,pabc5dd2a,22,female,"$60,000 to $84,999"
+2026-06-28 18:40:55,2026-06-28 19:06:12,0,100,1517,1,2026-06-28 19:06:14,R_5sQP60L3WPRgmvD,anonymous,EN,0.8999999761581421,,1,F_Z4avwrC6OY3gP0l,signature.png,7558,image/png,1,1,2,2,2,2,2,2,2,1,2,2,,,,,,,,,,,3,3,3,3,2,"1,4,5",,"1,3",,"1,3",,1,,,,,,,,1,,,,52,2,,2,1,,85705,1,0,4,20,,2,,1,,3,2,5,none,pa27220e4,53,female,"$25,000 to $39,999"
+2026-06-28 19:16:21,2026-06-28 19:22:05,0,100,343,1,2026-06-28 19:22:06,R_6LNVqDyzX8Tgpnq,anonymous,EN,1,,1,F_3eteigFNe0NxzW3,signature.png,8272,image/png,1,1,2,4,2,1,2,1,2,2,2,2,,,,,,,,,,,4,4,3,3,5,"1,4",,3,,"2,3",,2,4,5,4,4,5,2,,3,,,,36,1,,2,2,,85202,1,0,6,,,3,,1,,3,2,2,Ni,pf2ec8bf5,37,male,"$25,000 to $39,999"
+2026-06-28 19:40:06,2026-06-28 19:49:10,0,100,543,1,2026-06-28 19:49:11,R_3J2ylzdV7T1gIMF,anonymous,EN,0.800000011920929,,1,F_3rJbsZ0dM9dhGKD,signature.png,9493,image/png,1,1,2,2,1,2,1,2,2,2,2,2,,,,,,,,,,,4,2,2,4,6,3,,"1,2,6",,"1,3,5",walking dog,2,4,5,4,5,5,2,,4,,,Our public parks here in Pima County are all unsafe due to homeless drug zombies and our terrible City government.,63,2,,1,1,,85710,1,0,6,,,6,,1,,4,2,2,"An enjoyable survey especially as it delves into local issues thank you. ",pce21af7e,63,female,"$25,000 to $39,999"
+2026-06-28 19:47:43,2026-06-28 19:52:15,0,100,271,1,2026-06-28 19:52:16,R_6QM705orrkgNzAL,anonymous,EN,0.800000011920929,,1,F_1cVeawVXrwGknYZ,signature.png,8852,image/png,1,1,2,,,,,,,,,,1,1,2,1,1,1,2,1,1,4,4,5,5,4,3,"1,3,5",,"1,3,5,7",,"1,3",,1,,,,,,,,1,,,,32,1,,2,1,,85308,5,1,6,,,1,,1,,2,4,2,Thanks,pf2788bee,32,male,"$85,000 to $114,999"
+2026-06-28 19:42:14,2026-06-28 19:56:01,0,100,826,1,2026-06-28 19:56:02,R_5H70P6BaLvRFKgh,anonymous,EN,0.8999999761581421,,1,F_3r1YriovYuJCeR3,signature.png,3142,image/png,1,1,2,,,,,,,,,,1,2,1,1,2,1,1,2,1,4,5,3,4,5,1,3,,"1,3",,3,,2,3,5,3,3,4,2,,2,,,,30,2,,2,1,,85387,1,0,1,47,,1,,8,None of these apply to me,2,2,1,No,pf281ecb8,31,female,"$25,000 to $39,999"
+2026-06-28 19:55:31,2026-06-28 19:56:12,0,100,40,1,2026-06-28 19:56:13,R_37dHt5EwGnbcnBv,anonymous,EN,1,,1,F_wZtrWjdsrIeugJX,signature.png,7389,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pf9fb079a,40,female,"$115,000 to $149,999"
+2026-06-28 19:59:59,2026-06-28 20:01:07,0,100,68,1,2026-06-28 20:01:08,R_7QTxQtP3kh44rvz,anonymous,EN,0.6000000238418579,,1,F_3kzWF7FE2ZZRxnh,signature.png,8507,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pbf9e49a1,48,female,"Less than $9,999"
+2026-06-28 19:58:14,2026-06-28 20:02:05,0,100,231,1,2026-06-28 20:02:06,R_63e9WNNJHiVTr4R,anonymous,EN,0.800000011920929,,1,F_1ItJGs5qvvIHd7a,signature.png,4211,image/png,1,1,2,2,1,1,1,2,1,1,1,2,,,,,,,,,,,4,3,4,4,4,2,,"2,4,5",,"2,3",,1,,,,,,,,2,,,,26,2,,2,1,,85053,3,1,6,,,1,,1,,2,4,1,,pd70a5161,26,female,"$60,000 to $84,999"
+2026-06-28 19:46:44,2026-06-28 20:05:31,0,100,1126,1,2026-06-28 20:05:32,R_1EYBro1NDIIDkZQ,anonymous,EN,0.8999999761581421,,1,F_vV5roNwZR7vmfdf,signature.png,8435,image/png,1,1,2,4,1,2,2,2,1,1,1,2,,,,,,,,,,,5,4,4,4,5,"1,2",,"1,2,3,7",,"1,3,4",,1,,,,,,,,2,,,,46,1,,2,1,,85747,4,2,6,,,1,,1,,3,3,2,Very good survey,pcdedd528,47,male,"$60,000 to $84,999"
+2026-06-28 20:00:43,2026-06-28 20:08:04,0,100,441,1,2026-06-28 20:08:05,R_6pmPkroyQQ3Dsfh,anonymous,EN,1,,1,F_3fODnMc7aRkR5Jk,signature.png,8515,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pc6635e6d,60,male,"$10,000 to $24,999"
+2026-06-28 19:57:16,2026-06-28 20:11:05,0,100,829,1,2026-06-28 20:11:06,R_3oWOvfusRz7lzeY,anonymous,EN,1,,1,F_2TpYSFziuqBOXRH,signature.png,6691,image/png,1,1,2,2,2,1,2,2,2,1,2,2,,,,,,,,,,,3,4,4,5,5,"1,2,3",,"1,3,4,6,7",,"1,3,4",,1,,,,,,,,3,,,,25,2,,2,4,,85142,4,1,6,,,1,,"3,7",,5,5,"5,4","No but this is an actually a really good question and I enjoyed it alot. ",pa996c21d,44,female,"$115,000 to $149,999"
+2026-06-28 19:58:41,2026-06-28 20:18:19,0,100,1177,1,2026-06-28 20:18:20,R_5RmDOFE36fRNq7B,anonymous,EN,1,,1,F_cFHlMedSJMsod0t,signature.png,7492,image/png,1,1,2,,,,,,,,,,2,1,1,1,2,1,1,2,2,4,4,2,4,4,2,1,,3,,"1,3",,2,4,5,3,4,2,2,,1,,,,55,1,,2,3,,85027,3,0,4,41,,2,,1,,3,2,2,Good luck.,pc2db7edb,56,male,"$40,000 to $59,999"
+2026-06-28 21:00:49,2026-06-28 21:13:59,0,100,789,1,2026-06-28 21:14:00,R_6N4ZKXOoBBYzzuM,anonymous,EN,0.8999999761581421,,1,F_1gnzEudkFTt54Ad,signature.png,8891,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,1,2,2,4,4,3,3,4,3,"1,2",,"2,3",,"1,3",,2,4,5,5,5,5,4,,3,,,,44,1,,2,1,,85648,2,0,3,13,,3,,1,,3,4,2,n/a,pf0af2d58,45,male,"$85,000 to $114,999"
+2026-06-28 21:33:39,2026-06-28 21:51:28,0,100,1069,1,2026-06-28 21:51:30,R_1ypyvFyeau0Jvi8,anonymous,EN,1,,1,F_2Y65vUTYR4kVF6p,signature.png,6684,image/png,1,1,2,,,,,,,,,,2,1,1,2,1,1,1,2,1,4,4,2,3,4,2,1,,"1,5",,5,Take the kids,1,,,,,,,,1,,,,24,3,,2,1,,85730,3,1,6,,,2,,9,,2,1,2,,pad005ff6,25,female,"$10,000 to $24,999"
+2026-06-28 21:35:49,2026-06-28 22:00:51,0,100,1501,1,2026-06-28 22:00:52,R_5rBKUPEELmteS2V,anonymous,EN,0.800000011920929,,1,F_4ZbfUGDGBNfcWZP,signature.png,9585,image/png,1,1,2,2,2,1,2,1,2,1,1,2,,,,,,,,,,,4,2,5,4,1,3,,8,"None ","3,4",,1,,,,,,,,1,,,,46,2,,2,2,,85020,2,0,4,22,,3,,1,,2,1,2,,pa52db88a,46,female,"Less than $9,999"
+2026-06-28 22:46:53,2026-06-28 22:57:53,0,100,660,1,2026-06-28 22:57:54,R_6nrBH5Bo3ulFGVj,anonymous,EN,1,,1,F_2CPayqkmPMNP8yv,signature.png,5857,image/png,1,1,2,,,,,,,,,,2,1,1,1,2,1,1,2,2,4,5,1,5,5,3,"2,3",,"2,4",,"3,4",,1,,,,,,,,1,,,,27,1,,2,1,,85757,4,0,6,,,1,,1,,2,4,2,No,pcd29f729,27,male,"$60,000 to $84,999"
+2026-06-29 13:57:34,2026-06-29 13:58:58,0,100,84,1,2026-06-29 13:59:00,R_1szuTojB3ZVzWPE,anonymous,EN,0.8999999761581421,,1,F_2Ppr9WFj5v228rh,signature.png,6723,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pf1927a16,42,female,"$25,000 to $39,999"
+2026-06-29 23:29:23,2026-06-29 23:56:22,0,100,1618,1,2026-06-29 23:56:24,R_1Qpr5NL2tuslOSt,anonymous,EN,1,,1,F_2atqL5YlLl6tEUx,signature.png,6931,image/png,1,1,4,4,1,1,2,2,2,1,2,2,,,,,,,,,,,5,3,5,5,1,2,,8,None of the above,5,None of the above,1,,,,,,,,1,,,,58,2,,2,1,,85037,2,0,6,,,1,,1,,3,1,2,"I found your survey to be well authored and unbiased in content. 
+Thank you for the opportunity 
+Good luck with your study.",paa1e225b,58,female,"$10,000 to $24,999"
+2026-06-30 00:08:21,2026-06-30 00:16:33,0,100,492,1,2026-06-30 00:16:34,R_1CxbLLKehqyNAha,anonymous,EN,1,,1,F_2YSBuSKpBM4x9cz,signature.png,7823,image/png,1,1,2,2,1,1,2,1,1,1,2,2,,,,,,,,,,,4,5,4,4,2,"1,3",,"1,3,4,5",,"3,4",,1,,,,,,,,2,,,,45,2,,2,2,,85138,4,0,6,,,1,,1,,5,3,2,,pbd72518e,45,female,"$40,000 to $59,999"
+2026-06-30 00:19:42,2026-06-30 00:28:14,0,100,512,1,2026-06-30 00:28:15,R_7nrr2mgC3oSB6i5,anonymous,EN,0.30000001192092896,,1,F_ylGrsX96uoUWaSB,signature.png,7745,image/png,1,1,2,,,,,,,,,,1,1,1,1,1,1,1,1,1,4,4,3,4,4,3,"1,3",,"1,2,3",,"1,2,3,4",,1,,,,,,,,1,,,,46,1,,2,1,,85014,3,1,6,,,1,,1,,6,5,2,"Great survey, thank you fo gathering valuable community feedback  perspectives today.",pffba40b0,46,male,"$115,000 to $149,999"
+2026-06-30 00:30:12,2026-06-30 00:31:11,0,100,59,1,2026-06-30 00:31:12,R_6uk620qaqWRbLUd,anonymous,EN,0.800000011920929,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pdbe3b1f5,24,male,"$40,000 to $59,999"
+2026-06-30 00:31:14,2026-06-30 00:38:38,0,100,443,1,2026-06-30 00:38:39,R_1ZNqtEJcsm4J983,anonymous,EN,0.8999999761581421,,1,F_WoBk6vJ9ca7sa6B,signature.png,8065,image/png,1,1,2,2,2,1,2,2,2,1,1,2,,,,,,,,,,,4,2,4,4,3,"1,2,3",,"1,3,7",,"2,3,4",,1,,,,,,,,2,,,,43,2,,1,3,,85635,4,2,6,,,1,,9,,3,2,2,"Enjoying ",pb620fdf4,43,female,"$40,000 to $59,999"
+2026-06-30 00:31:16,2026-06-30 00:40:59,0,100,582,1,2026-06-30 00:41:00,R_1GQuMyRGZ6teOIG,anonymous,EN,1,,1,F_2SkpCx48I4XtSTw,signature.png,7346,image/png,1,1,2,,,,,,,,,,1,2,1,2,2,1,2,2,1,4,4,4,5,5,3,"1,3",,"2,4,5,6",,"1,3",,1,,,,,,,,3,,,,22,2,,1,1,,85131,5,1,6,,,1,,1,,3,4,2,N/A,pf19f8624,23,female,"$60,000 to $84,999"
+2026-06-30 00:37:22,2026-06-30 00:42:49,0,100,326,1,2026-06-30 00:42:50,R_7paLt2D2m7Xa1wN,anonymous,EN,1,,1,F_2UWyMkcTwYYdWNh,signature.png,7689,image/png,1,1,4,,,,,,,,,,1,1,2,1,2,1,2,1,2,4,4,4,5,4,5,3,,"3,7",,"1,4",,1,,,,,,,,1,,,,18,1,,1,3,,85742,4,0,6,,,1,,1,,2,4,2,"I love this survey ",pca7dbc2a,26,male,"$115,000 to $149,999"
+2026-06-30 00:37:47,2026-06-30 00:45:53,0,100,485,1,2026-06-30 00:45:54,R_6fr9botRVoC3TK6,anonymous,EN,1,,1,F_2SkvsXgJbIAzC1L,signature.png,7914,image/png,1,1,4,4,2,1,2,2,2,1,1,2,,,,,,,,,,,4,2,4,4,3,3,,1,,"1,3",,1,,,,,,,,1,,,,35,2,,2,1,,85747,4,3,6,,,2,,1,,3,1,1,Not at this time,pb191ef6b,36,female,"$10,000 to $24,999"
+2026-06-30 00:50:15,2026-06-30 00:50:45,0,100,29,1,2026-06-30 00:50:45,R_6EYuchzU9BzIYiF,anonymous,EN,1,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pbb103040,18,female,"$115,000 to $149,999"
+2026-06-30 00:46:50,2026-06-30 00:53:55,0,100,424,1,2026-06-30 00:53:56,R_7R2PvvtWXItrjst,anonymous,EN,1,,1,F_uxdHU6RBnaEInp7,signature.png,6783,image/png,1,1,2,,,,,,,,,,2,1,1,1,2,1,1,2,1,4,4,3,4,5,2,"1,2,3",,"1,2,3,6",,"1,3",,1,,,,,,,,3,,,,18,2,,2,1,,85629,4,2,4,47,,1,,1,,1,1,2,no i do not,pfccfc71a,18,female,"$10,000 to $24,999"
+2026-06-30 00:50:04,2026-06-30 00:54:33,0,100,269,1,2026-06-30 00:54:34,R_5Hsyhc2wAWmDpKx,anonymous,EN,1,,1,F_Zt3rAJpgf6k726d,signature.png,7470,image/png,1,1,4,2,2,1,2,1,2,1,2,1,,,,,,,,,,,5,3,1,2,2,"2,3,4,5",,"2,3,4,5,6,7",,"1,2",,1,,,,,,,,1,,,,31,1,,1,1,,85041,1,0,6,,,1,,9,,3,1,2,None,pc7644b1c,30,male,"Less than $9,999"
+2026-06-30 00:54:42,2026-06-30 01:03:59,0,100,556,1,2026-06-30 01:04:00,R_1U5voRn8hlHl9tr,anonymous,EN,1,,1,F_2VE0blZk4T8g9bV,signature.png,4947,image/png,1,1,2,2,2,2,1,2,2,1,2,1,,,,,,,,,,,3,4,2,4,3,3,,"1,2",,"2,3,4",,1,,,,,,,,3,,,,18,2,,1,6,Hispanic,85746,4,1,4,3,,1,,7,,3,3,2,No,pbbc18f4d,19,female,"$60,000 to $84,999"
+2026-06-30 00:55:26,2026-06-30 01:04:17,0,100,530,1,2026-06-30 01:04:17,R_3gTMs5lRBVsWZUr,anonymous,EN,1,,1,F_1pRNymmDgFdfTLF,signature.png,5476,image/png,1,1,2,,,,,,,,,,2,2,1,1,2,1,1,2,2,4,4,5,4,4,4,"1,4,5",,"2,3,6",,"3,4",,1,,,,,,,,2,,,,20,2,,1,1,,95719,4,0,6,,,2,,8,Student,3,2,2,N/A,pcd9915d8,20,female,"$60,000 to $84,999"
+2026-06-30 00:56:35,2026-06-30 01:05:22,0,100,526,1,2026-06-30 01:05:23,R_6qdp3lwztLfAtsP,anonymous,EN,0.8999999761581421,,1,F_2EFQv3MUtDhdK0k,signature.png,5368,image/png,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pcac2ab75,63,male,"$40,000 to $59,999"
+2026-06-30 13:48:16,2026-06-30 13:58:21,0,100,605,1,2026-06-30 13:58:22,R_5TF8HbVKQOUAnOY,anonymous,EN,1,,1,F_20YXuWNDzRJpulH,signature.png,7588,image/png,1,1,2,2,2,1,1,2,1,1,2,2,,,,,,,,,,,5,3,2,4,1,2,,8,I live in Sierra Vista,4,,1,,,,,,,,1,,,,69,1,,2,1,,85650,1,0,4,13,,1,,1,,6,3,2,"Crime in Tucson, including the parks, is out of control.  Patrols are more valuable there than in other Southern Arizona communities.",pf1b5d3d2,69,male,"$60,000 to $84,999"
+2026-06-30 14:07:51,2026-06-30 14:12:42,0,100,290,1,2026-06-30 14:12:43,R_6ahmBT4rvgxh6Kr,anonymous,EN,1,,1,F_2QKAjHKEmbxmmvf,signature.png,5647,image/png,1,1,2,,,,,,,,,,2,1,1,1,2,1,2,2,1,4,5,4,5,5,4,"1,3",,"1,5,7",,"1,3,4",,1,,,,,,,,1,,,,27,1,,2,1,,85392,1,0,6,,,1,,1,,5,5,2,,pb732e7dc,28,male,"$115,000 to $149,999"
+2026-06-30 14:10:18,2026-06-30 14:32:56,0,100,1357,1,2026-06-30 14:32:57,R_7I0RUIPVYRGFDC6,anonymous,EN,1,,1,F_3QRDuWzIocJlZdH,signature.png,3530,image/png,1,1,4,,,,,,,,,,1,1,2,2,1,1,1,2,2,4,3,2,3,4,4,"1,3",,"1,2,5",,"2,3,4",,1,,,,,,,,2,,,,58,2,,2,1,,85747,3,0,6,,,1,,9,,4,5,2,,pdf3a3785,58,female,"$115,000 to $149,999"
+2026-06-30 15:31:41,2026-06-30 15:48:10,0,100,989,1,2026-06-30 15:48:11,R_1KqGbcMa5dLxuCB,anonymous,EN,0.800000011920929,,1,F_1PZaLjNYJgjQtPd,signature.png,7865,image/png,1,1,2,2,2,1,2,2,2,1,2,2,,,,,,,,,,,4,2,3,3,3,"1,6",Scooter 🛵,"2,5,6,8",Right now it's too hot!! Just my yard,3,,2,4,5,4,4,4,1,,4,,,"There has been so much crime, and people getting hurt from those living on the streets and in parks. Our parks need to be taken care of before we add more ",61,2,,1,1,,85719,2,0,6,,,3,,1,,2,2,5,"We need more protection in the streets, parks etc right now before we add more parks",pa297363f,61,female,"$25,000 to $39,999"
+2026-06-25 13:18:04,2026-06-25 13:18:21,0,2,17,0,2026-07-02 13:18:23,R_3fNJjQ8F0Nb1CWw,anonymous,EN,1,true,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pcbe4ca64,,,
+2026-06-25 15:24:15,2026-06-25 15:25:01,0,9,45,0,2026-07-02 15:27:18,R_3BVsloYWUgY2gys,anonymous,EN,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,paa84d204,69,female,"$25,000 to $39,999"
+2026-06-25 23:20:58,2026-06-25 23:21:33,0,9,35,0,2026-07-02 23:21:39,R_5VfQxRvzE0CMeSw,anonymous,EN,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pd178edc6,19,female,"$60,000 to $84,999"
+2026-06-26 01:24:17,2026-06-26 01:25:35,0,5,77,0,2026-07-03 01:25:36,R_3NgYfyA8HmPFnm3,anonymous,EN,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pb450ebd0,65,female,"$40,000 to $59,999"
+2026-06-26 09:56:35,2026-06-26 09:57:39,0,9,63,0,2026-07-03 09:57:42,R_62Gp7RwjbL20oEb,anonymous,EN,0.800000011920929,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pf6d3d4e9,67,female,"$115,000 to $149,999"
+2026-06-26 13:21:32,2026-06-26 13:28:51,0,9,439,0,2026-07-03 13:28:59,R_1Qiw3VZ75coTgWt,anonymous,EN,0.8999999761581421,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pc8ff0920,64,female,"$10,000 to $24,999"
+2026-06-27 23:38:41,2026-06-27 23:43:33,0,9,291,0,2026-07-04 23:43:34,R_6N31FxmewBCSncZ,anonymous,EN,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pd08dc636,61,female,"$40,000 to $59,999"
+2026-06-27 23:47:02,2026-06-27 23:53:47,0,6,405,0,2026-07-04 23:53:48,R_6nlAvxRhmnBRNGZ,anonymous,EN,0.6000000238418579,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pdaca45f5,77,female,"$10,000 to $24,999"
+2026-06-28 11:06:32,2026-06-28 11:07:01,0,5,29,0,2026-07-05 11:07:04,R_5luBBAAKTRQT0Hl,anonymous,EN,0.6000000238418579,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pa2bb5375,33,female,"$25,000 to $39,999"
+2026-06-28 11:21:37,2026-06-28 11:22:18,0,9,40,0,2026-07-05 11:22:21,R_7rYi2u3UnykjtC4,anonymous,EN,0.800000011920929,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pdd71a8a7,56,female,"$25,000 to $39,999"
+2026-06-28 11:39:48,2026-06-28 11:40:40,0,9,51,0,2026-07-05 11:40:41,R_1doIdmqbFP7rya1,anonymous,EN,0.8999999761581421,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,paea99998,70,female,"$60,000 to $84,999"
+2026-06-28 13:07:49,2026-06-28 13:08:14,0,2,25,0,2026-07-05 13:08:15,R_1TXHrGUbfxHlAzL,anonymous,EN,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pc22c8315,77,male,"$60,000 to $84,999"
+2026-06-28 13:08:43,2026-06-28 13:10:18,0,9,95,0,2026-07-05 13:10:19,R_170ZJCKYEiVelGO,anonymous,EN,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pae357a48,70,female,"$40,000 to $59,999"
+2026-06-28 13:25:20,2026-06-28 13:30:19,0,23,298,0,2026-07-05 13:30:26,R_7P6qmLPOGfHQUG8,anonymous,EN,0.800000011920929,,1,F_3mmmQYantLQN7lH,signature.png,9238,image/png,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pc9214a93,69,male,"$10,000 to $24,999"
+2026-06-28 16:35:52,2026-06-28 16:36:29,0,9,37,0,2026-07-05 16:36:30,R_68CmmcO02Y2IjUE,anonymous,EN,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pa01ecefe,32,female,"$150,000 to $199,999"
+2026-06-28 18:26:51,2026-06-28 18:37:23,0,97,632,0,2026-07-05 18:37:28,R_1TMOwXe6bzaB4OH,anonymous,EN,1,,1,F_3n6qcHr2C6WLauS,signature.png,6215,image/png,1,1,2,,,,,,,,,,2,1,1,1,2,1,2,2,2,4,4,3,4,4,1,1,,5,,3,,1,,,,,,,,2,,,,65,2,,2,1,,85603,2,0,4,48,,6,,9,,2,2,,,pfb926d09,66,female,"$25,000 to $39,999"
+2026-06-30 00:33:47,2026-06-30 00:40:43,0,5,416,0,2026-07-07 00:40:45,R_7PRxW7S0mDW0Dog,anonymous,EN,0.800000011920929,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pbcb965be,38,female,"Less than $9,999"
+2026-06-30 11:46:04,2026-06-30 11:49:57,0,5,232,0,2026-07-07 11:50:04,R_55X95Bnn96czaiA,anonymous,EN,0.800000011920929,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pbd2d3723,70,male,"$10,000 to $24,999"
+2026-06-30 14:18:20,2026-06-30 14:20:02,0,2,101,0,2026-07-07 14:20:09,R_7J7LYIzImOpsZJQ,anonymous,EN,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,paa954b61,42,male,"$25,000 to $39,999"
