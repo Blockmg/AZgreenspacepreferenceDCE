@@ -1,1 +1,2 @@
 * text=auto
+data/*.csv -text

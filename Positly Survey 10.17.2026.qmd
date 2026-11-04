@@ -14,17 +14,27 @@ library(janitor)
 library(stringr)
 library(apollo) # for analysis
 library(readxl) # for loading design
+library(here)   # file paths relative to the project root (.Rproj)
 ```
 
 ## Load Datasets & Design
 
 ```{r load data & design}
 
-qt_labels <- read_survey(file.choose())
+# Qualtrics exports from July 31, 2026 (see data/README.md).
+# Labels = "choice text" export, values = "numeric values" export.
+qt_labels <- read_survey(here("data", "qualtrics_labels_2026-07-31.csv"))
 
-qt_values <- read_survey(file.choose())
+qt_values <- read_survey(here("data", "qualtrics_values_2026-07-31.csv"))
 
-design <- read_excel("C:/Users/mykha/Documents/Photovoice/SCORCH DCE Experimental Design Positly.xlsx",sheet = "Design | Choice Tasks") |>clean_names()
+# Experimental design workbook (committed at the repo root)
+design_path <- here("SCORCH DCE Experimental Design Positly.xlsx")
+
+design <- read_excel(design_path, sheet = "Design | Choice Tasks") |> clean_names()
+
+# all model output (Apollo files + results tables) is written here
+output_dir <- here("output")
+dir.create(output_dir, showWarnings = FALSE)
 
 # to maintain original data, create duplicate dataframes to work in from this point forward
 df.labs <- qt_labels
@@ -35,7 +45,7 @@ df.vals <- qt_values
 
 ```{r clean datasets}
 
-# drop IP addresses
+# drop Status (Qualtrics response type: survey preview vs. live response)
 df.labs <- df.labs |>
   select(-Status)
 
@@ -102,8 +112,7 @@ df.vals <- df.vals |>
   filter(finished == 1,
          south_az == 1,
          consent == 1) |>
-  remove_empty("cols") |>
-  mutate(across(where(is.numeric)))
+  remove_empty("cols")
 
 # note: volunteer question was dropped because all responses were NA, question was probably added to survey after positly runs were completed
 
@@ -198,7 +207,7 @@ survey_long <- survey_long |>
   mutate(choice_situation = if_else(block == 2, choice_situation + 9L, choice_situation))
 
 #inspect and verify design date 
-excel_sheets("C:/Users/mykha/Documents/Photovoice/SCORCH DCE Experimental Design Positly.xlsx")
+excel_sheets(design_path)
 dim(design)
 names(design)
 
@@ -235,8 +244,6 @@ final_data <- dce_data |>
 # quality check
 dim(final_data)
 
-sum(is.na(dce_data$alt1_proximity))
-
 sum(is.na(final_data$response_id))
 
 table(final_data$block)
@@ -267,79 +274,6 @@ a_choice_summary <- a_choice_count |>
   filter(times_chose_A >= 1)
 
 a_choice_summary
-
-# RESHAPE DCE DATA TO ALTERNATIVE-LONG FORMAT
-
-# Create one row per alternative (A or B) for each choice task
-dce_long <- final_data |>
-  
-# Make DCE attribute levels consistent before reshaping
-  mutate(
-    across(
-      matches("^alt[12]_(proximity|amenities|plant|safety|shade|accessibility)$"),
-      as.integer
-    )
-  ) |>
-  
-# Reshape Park A and Park B from separate columns into separate rows
-  pivot_longer(
-    cols = matches("^alt[12]_(proximity|amenities|plant|safety|shade|accessibility)$"),
-    names_to = c("alternative", "attribute"),
-    names_pattern = "alt([12])_(.*)",
-    values_to = "level"
-  ) |>
-  pivot_wider(
-    names_from = attribute,
-    values_from = level,
-    names_prefix = "dce_"
-  ) |>
-  
-# Label alternative 1 as A and alternative 2 as B
-  mutate(
-    alternative = if_else(alternative == "1", "A", "B")
-  )
-
-# Check the new long-format dataset
-dim(dce_long)
-table(dce_long$alternative)
-
-# Create choice indicator and alternative-specific constant variables
-dce_long <- dce_long |>
-  mutate(
-    chosen = case_when(
-      choice == 1 & alternative == "A" ~ 1,
-      choice == 2 & alternative == "B" ~ 1,
-      TRUE ~ 0
-    ),
-    asca = if_else(alternative == "A", 1, 0),
-    ascb = if_else(alternative == "B", 1, 0)
-  )
-# Check choice and ASC coding
-table(dce_long$alternative, dce_long$chosen)
-
-table(dce_long$alternative, dce_long$asca)
-
-table(dce_long$alternative, dce_long$ascb)
-
-sum(dce_long$chosen)
-
-# Inspect the long-format DCE variables
-dce_long |>
-  select(
-    response_id,
-    choice_situation,
-    alternative,
-    chosen,
-    asca,
-    ascb,
-    dce_proximity,
-    dce_amenities,
-    dce_plant,
-    dce_safety,
-    dce_shade,
-    dce_accessibility
-  ) |>
-  slice_head(n = 10)
 ```
 
 ```{r model}
@@ -388,7 +322,7 @@ apollo_control <- list(
   modelName       = "MNL_DCE",
   modelDescr      = "MNL model of greenspace preferences",
   indivID         = "response_id",
-  outputDirectory = "output"
+  outputDirectory = output_dir
 )
 
 # Check analysis dataset
@@ -396,10 +330,7 @@ dim(database)
 table(database$choice)
 
 # Load attribute definitions from the experimental design
-attribute_levels <- read_excel(
-  "C:/Users/mykha/Documents/Photovoice/SCORCH DCE Experimental Design Positly.xlsx",
-  sheet = "Attributes"
-)
+attribute_levels <- read_excel(design_path, sheet = "Attributes")
 
 attribute_levels
 
@@ -691,5 +622,8 @@ final_results <- results_table |>
   )
 
 final_results
+
+# Save the reporting table next to the Apollo output files
+write_csv(final_results, file.path(output_dir, "mnl_results_table.csv"))
 
 ```
