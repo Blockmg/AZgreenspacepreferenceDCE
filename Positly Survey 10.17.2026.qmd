@@ -185,6 +185,60 @@ df.vals <- df.vals |>
   mutate(a1 = case_when(a1 == 2 ~ 1, a1 == 4 ~ 2, TRUE ~ a1))
 ```
 
+## Data-Quality Flags
+
+Documented exclusion rules (see `docs/data-quality.md`). Respondents are only
+**flagged** here. The headline model keeps everyone; a sensitivity model in the
+model chunk re-estimates without the flagged respondents.
+
+1. **Bot risk:** reCAPTCHA score below 0.5 (Google's usual threshold).
+2. **Straight-lining:** chose the same side (all Park A or all Park B) in every choice task.
+3. **Failed attention check:** `QC_agree` answered with anything other than "Agree".
+   The check was only *shown* to block-2 respondents (Qualtrics survey-flow problem), so
+   block-1 respondents can't be screened on this rule. This can't be fixed after the fact.
+4. **Speeder:** total survey time below one third of the sample median.
+
+```{r quality flags}
+
+choice_cols <- str_subset(names(df.vals), "^[ab][1-9]$")
+
+quality_flags <- df.vals |>
+  select(response_id, q_recaptcha_score, duration_in_seconds, all_of(choice_cols)) |>
+  left_join(df.labs |> select(response_id, qc_agree_label = qc_agree),
+            by = "response_id") |>
+  mutate(
+    block           = if_else(rowSums(!is.na(pick(matches("^a[1-9]$")))) > 0, 1, 2),
+    n_tasks         = rowSums(!is.na(pick(all_of(choice_cols)))),
+    n_chose_A       = rowSums(pick(all_of(choice_cols)) == 1, na.rm = TRUE),
+    attention_shown = !is.na(qc_agree_label),
+    flag_recaptcha  = !is.na(q_recaptcha_score) & q_recaptcha_score < 0.5,
+    flag_straightline = n_chose_A == 0 | n_chose_A == n_tasks,
+    flag_attention  = attention_shown & qc_agree_label != "Agree",
+    flag_speeder    = duration_in_seconds < median(duration_in_seconds) / 3,
+    exclude_quality = flag_recaptcha | flag_straightline | flag_attention | flag_speeder
+  ) |>
+  select(response_id, block, n_tasks, n_chose_A, q_recaptcha_score,
+         duration_in_seconds, qc_agree_label, attention_shown, starts_with("flag_"),
+         exclude_quality)
+
+# The attention check was not shown evenly: almost only block 2 saw it
+quality_flags |> count(block, attention_shown)
+
+# Speeder cut-off (seconds)
+median(quality_flags$duration_in_seconds) / 3
+
+# How many respondents each rule flags, and in total
+quality_flags |>
+  summarise(across(c(starts_with("flag_"), exclude_quality), sum))
+
+# Respondents dropped in the quality sensitivity model
+quality_flags |> filter(exclude_quality)
+
+quality_exclude <- quality_flags |> filter(exclude_quality) |> pull(response_id)
+
+write_csv(quality_flags, file.path(output_dir, "quality_flags.csv"))
+```
+
 ## Reformat `df.vals`
 
 ```{r long reformat}
@@ -264,14 +318,14 @@ a_choice_count <- final_data |>
   )
 
 # Count how many participants selected Alternative A
-# 1 through 9 times across their 9 choice tasks
+# 0 through 9 times across their 9 choice tasks
+# (0 = always chose B, 9 = always chose A; both are straight-lining)
 a_choice_summary <- a_choice_count |>
   count(times_chose_A, name = "number_of_participants") |>
   complete(
-    times_chose_A = 1:9,
+    times_chose_A = 0:9,
     fill = list(number_of_participants = 0)
-  ) |>
-  filter(times_chose_A >= 1)
+  )
 
 a_choice_summary
 ```
@@ -528,6 +582,62 @@ model <- apollo_estimate(
 apollo_modelOutput(model)
 
 apollo_saveOutput(model)
+
+
+# HELPERS FOR ADDITIONAL MODELS
+
+# Estimate the same MNL on another sample (or with other fixed parameters).
+# Uses the same apollo_beta / apollo_probabilities as the model above.
+fit_mnl <- function(data, model_name, model_descr, fixed = apollo_fixed) {
+  control <- modifyList(apollo_control,
+                        list(modelName = model_name, modelDescr = model_descr))
+  inputs <- apollo_validateInputs(
+    apollo_beta    = apollo_beta,
+    apollo_fixed   = fixed,
+    database       = as.data.frame(data),
+    apollo_control = control
+  )
+  fit <- apollo_estimate(apollo_beta, fixed, apollo_probabilities, inputs)
+  apollo_modelOutput(fit)
+  apollo_saveOutput(fit)
+  fit
+}
+
+# One row per parameter: estimate, robust SE, robust p-value.
+# Matches by parameter name, so it does not depend on the order of apollo_beta.
+tidy_mnl <- function(fit) {
+  rse <- fit$robse
+  if (is.null(names(rse))) names(rse) <- names(fit$estimate)
+  tibble(
+    parameter = names(fit$estimate),
+    estimate  = unname(fit$estimate),
+    robust_se = unname(rse[names(fit$estimate)])
+  ) |>
+    mutate(robust_t = estimate / robust_se,
+           p_value  = 2 * pnorm(-abs(robust_t)))
+}
+
+
+# SENSITIVITY: DROP RESPONDENTS FLAGGED BY THE DATA-QUALITY RULES
+
+model_quality <- fit_mnl(
+  database |> filter(!response_id %in% quality_exclude),
+  model_name  = "MNL_DCE_quality",
+  model_descr = "MNL excluding respondents flagged by data-quality rules"
+)
+
+quality_comparison <- tidy_mnl(model) |>
+  select(parameter, all_est = estimate, all_p = p_value) |>
+  left_join(tidy_mnl(model_quality) |>
+              select(parameter, excl_est = estimate, excl_p = p_value),
+            by = "parameter") |>
+  filter(!is.na(all_p)) |>
+  mutate(across(ends_with("_est"), \(x) round(x, 3)),
+         across(ends_with("_p"), \(x) signif(x, 2)))
+
+quality_comparison
+
+write_csv(quality_comparison, file.path(output_dir, "sensitivity_quality_exclusions.csv"))
 
 # CREATE MNL RESULTS TABLE
 
