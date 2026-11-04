@@ -348,6 +348,39 @@ database <- database |>
     long_term_az = if_else(yrs_az == 6, 1, 0)
   )
 
+# Region from the self-reported ZIP code (first three digits).
+# The screener only asked "Are you currently living in Southern Arizona?",
+# and many Phoenix-area residents answered "Yes" (issue #2).
+database <- database |>
+  mutate(
+    zip3 = str_sub(str_trim(as.character(zipcode)), 1, 3),
+    zip_region = case_when(
+      zip3 %in% c("856", "857")        ~ "Tucson / Southern AZ (856-857)",
+      zip3 %in% c("850", "852", "853") ~ "Phoenix metro (850, 852-853)",
+      zip3 == "851"                    ~ "Pinal County (851)",
+      TRUE                             ~ "Other / missing"
+    ),
+    tucson_zip = as.integer(zip3 %in% c("856", "857"))
+  )
+
+# Respondents by ZIP region
+database |>
+  distinct(response_id, zip_region) |>
+  count(zip_region)
+
+# WHICH SAMPLE IS THE HEADLINE?
+# "all"        = everyone who said they live in Southern Arizona (current results)
+# "tucson_zip" = only respondents with a Tucson / Southern AZ ZIP (856-857)
+# Every model below uses `database`; the region comparison always uses
+# `database_all`. This is a framing decision, see issue #2.
+analysis_sample <- "all"
+
+database_all <- database
+
+if (analysis_sample == "tucson_zip") {
+  database <- database |> filter(tucson_zip == 1)
+}
+
 # Convert DCE attribute levels to integers
 database <- database |>
   mutate(
@@ -663,6 +696,58 @@ quality_comparison <- tidy_mnl(model) |>
 quality_comparison
 
 write_csv(quality_comparison, file.path(output_dir, "sensitivity_quality_exclusions.csv"))
+
+
+# SAMPLE GEOGRAPHY: TUCSON-ZIP SUBSAMPLE VS. EVERYONE ELSE (issue #2)
+
+model_tucson <- fit_mnl(
+  database_all |> filter(tucson_zip == 1),
+  model_name  = "MNL_DCE_tucson_zip",
+  model_descr = "MNL (no interaction), respondents with 856/857 ZIP codes"
+)
+
+model_non_tucson <- fit_mnl(
+  database_all |> filter(tucson_zip == 0),
+  model_name  = "MNL_DCE_non_tucson_zip",
+  model_descr = "MNL (no interaction), respondents without 856/857 ZIP codes"
+)
+
+model_all <- if (analysis_sample == "all") model else fit_mnl(
+  database_all,
+  model_name  = "MNL_DCE_all",
+  model_descr = "MNL (no interaction), full sample"
+)
+
+# Pooling test: do Tucson-ZIP and other respondents share the same
+# preference parameters? (Likelihood ratio, pooled vs. separate models.
+# Ignores possible scale differences between groups; with n = 36 vs. 48
+# it has little power, so read the estimates side by side as well.)
+lr_region <- tibble(
+  LL_pooled   = model_all$maximum,
+  LL_separate = model_tucson$maximum + model_non_tucson$maximum,
+  chi_sq      = 2 * (LL_separate - LL_pooled),
+  df          = model_tucson$numParams + model_non_tucson$numParams - model_all$numParams,
+  p_value     = pchisq(chi_sq, df, lower.tail = FALSE)
+)
+
+lr_region
+
+region_comparison <- tidy_mnl(model_all) |>
+  select(parameter, all_est = estimate, all_p = p_value) |>
+  left_join(tidy_mnl(model_tucson) |>
+              select(parameter, tucson_est = estimate, tucson_p = p_value),
+            by = "parameter") |>
+  left_join(tidy_mnl(model_non_tucson) |>
+              select(parameter, other_est = estimate, other_p = p_value),
+            by = "parameter") |>
+  filter(!is.na(all_p)) |>
+  mutate(across(ends_with("_est"), \(x) round(x, 3)),
+         across(ends_with("_p"), \(x) signif(x, 2)))
+
+region_comparison
+
+write_csv(region_comparison, file.path(output_dir, "sensitivity_region_tucson_zip.csv"))
+write_csv(lr_region, file.path(output_dir, "lr_test_region_pooling.csv"))
 
 
 # CREATE MNL RESULTS TABLES
