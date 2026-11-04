@@ -567,28 +567,17 @@ apollo_probabilities <- function(
 }
 
 
-# ESTIMATE MODEL
+# HELPERS FOR ESTIMATING AND REPORTING MODELS
 
+# Interaction parameters (plant type x 10+ years in AZ).
+# Fixing them at 0 gives the model without the interaction.
+interaction_pars <- c("b_plant_1_az", "b_plant_3_az")
+main_fixed <- c(apollo_fixed, interaction_pars)
 
-model <- apollo_estimate(
-  apollo_beta,
-  apollo_fixed,
-  apollo_probabilities,
-  apollo_inputs
-)
-
-# DISPLAY AND SAVE MODEL RESULTS
-
-apollo_modelOutput(model)
-
-apollo_saveOutput(model)
-
-
-# HELPERS FOR ADDITIONAL MODELS
-
-# Estimate the same MNL on another sample (or with other fixed parameters).
-# Uses the same apollo_beta / apollo_probabilities as the model above.
-fit_mnl <- function(data, model_name, model_descr, fixed = apollo_fixed) {
+# Estimate the MNL on a given sample. By default the interaction is left out
+# (the headline specification); pass fixed = apollo_fixed to include it.
+# Uses the same apollo_beta / apollo_probabilities defined above.
+fit_mnl <- function(data, model_name, model_descr, fixed = main_fixed) {
   control <- modifyList(apollo_control,
                         list(modelName = model_name, modelDescr = model_descr))
   inputs <- apollo_validateInputs(
@@ -618,12 +607,48 @@ tidy_mnl <- function(fit) {
 }
 
 
+# ESTIMATE MODELS
+
+# Headline model: no plant x residency interaction.
+# The interaction is not supported by the data (see the LR test below), and
+# with it in the model the plant "main effects" only describe respondents
+# with under 10 years in Arizona.
+model <- fit_mnl(
+  database,
+  model_name  = "MNL_DCE_main",
+  model_descr = "MNL of greenspace preferences (headline, no interaction)"
+)
+
+# Secondary model: plant type x 10+ years in Arizona
+model_interaction <- fit_mnl(
+  database,
+  model_name  = "MNL_DCE_plant_x_AZ",
+  model_descr = "MNL with plant type x 10+ years in AZ interaction",
+  fixed       = apollo_fixed
+)
+
+# Likelihood-ratio test: does the interaction improve fit?
+apollo_lrTest(model, model_interaction)
+
+lr_interaction <- tibble(
+  LL_main        = model$maximum,
+  LL_interaction = model_interaction$maximum,
+  chi_sq         = 2 * (LL_interaction - LL_main),
+  df             = model_interaction$numParams - model$numParams,
+  p_value        = pchisq(chi_sq, df, lower.tail = FALSE)
+)
+
+lr_interaction
+
+write_csv(lr_interaction, file.path(output_dir, "lr_test_interaction.csv"))
+
+
 # SENSITIVITY: DROP RESPONDENTS FLAGGED BY THE DATA-QUALITY RULES
 
 model_quality <- fit_mnl(
   database |> filter(!response_id %in% quality_exclude),
   model_name  = "MNL_DCE_quality",
-  model_descr = "MNL excluding respondents flagged by data-quality rules"
+  model_descr = "MNL (no interaction) excluding respondents flagged by data-quality rules"
 )
 
 quality_comparison <- tidy_mnl(model) |>
@@ -639,101 +664,110 @@ quality_comparison
 
 write_csv(quality_comparison, file.path(output_dir, "sensitivity_quality_exclusions.csv"))
 
-# CREATE MNL RESULTS TABLE
 
-# Extract coefficient estimates and robust standard errors
-# from the estimated Apollo model
-results_table <- data.frame(
-  parameter = names(model$estimate),
-  estimate = as.numeric(model$estimate),
-  robust_se = as.numeric(model$robse)
+# CREATE MNL RESULTS TABLES
+
+# Labels for every parameter, looked up by name
+param_labels <- tribble(
+  ~parameter,          ~attribute,                       ~level,
+  "asc_A",             "Alternative-specific constant",  "Alternative A vs. B",
+  "b_proximity_1",     "Proximity",                      ">4 miles",
+  "b_proximity_2",     "Proximity",                      "2-4 miles",
+  "b_proximity_3",     "Proximity",                      "1 mile",
+  "b_amenities_1",     "Amenities",                      "Gathering areas",
+  "b_amenities_2",     "Amenities",                      "Nature play",
+  "b_amenities_3",     "Amenities",                      "No additional amenities",
+  "b_plant_1",         "Plant type",                     "Mostly native plants",
+  "b_plant_2",         "Plant type",                     "Mix of native and non-native plants",
+  "b_plant_3",         "Plant type",                     "Mostly non-native plants",
+  "b_plant_1_az",      "Plant type x Arizona residency", "Mostly native plants: difference for 10+ yrs in AZ",
+  "b_plant_3_az",      "Plant type x Arizona residency", "Mostly non-native plants: difference for 10+ yrs in AZ",
+  "b_safety_1",        "Safety",                         "No safety features",
+  "b_safety_2",        "Safety",                         "Lighting",
+  "b_safety_3",        "Safety",                         "Patrol",
+  "b_shade_1",         "Shade",                          "Shade from ramada",
+  "b_shade_2",         "Shade",                          "Shade from a tree",
+  "b_shade_3",         "Shade",                          "No shade",
+  "b_accessibility_1", "Accessibility",                  "Mostly paved paths and accessible amenities",
+  "b_accessibility_2", "Accessibility",                  "Some natural paths and limited accessibility routes",
+  "b_accessibility_3", "Accessibility",                  "No paths and no accessibility routes"
 )
 
-# Add labels for the ASC and DCE attribute levels
-results_table <- results_table |>
-  mutate(
-    attribute = c(
-      "Alternative-specific constant",
-      rep("Proximity", 3),
-      rep("Amenities", 3),
-      rep("Plant type", 3),
-      rep("Plant type x Arizona residency", 2),
-      rep("Safety", 3),
-      rep("Shade", 3),
-      rep("Accessibility", 3)
-    ),
-    
-    level = c(
-      "Alternative A vs. B",
-      
-      # Proximity
-      ">4 miles",
-      "2-4 miles",
-      "1 mile",
-      
-      # Amenities
-      "Gathering areas",
-      "Nature play",
-      "No additional amenities",
-      
-      # Plant type
-      "Mostly native plants",
-      "Mix of native and non-native plants",
-      "Mostly non-native plants",
-      
-      # Interactions
-      "Mostly native plants x long-term AZ",
-      "Mostly non-native plants x long-term AZ",
-      
-      # Safety
-      "No safety features",
-      "Lighting",
-      "Patrol",
-      
-      # Shade
-      "Shade from ramada",
-      "Shade from a tree",
-      "No shade",
-      
-      # Accessibility
-      "Mostly paved paths and accessible amenities",
-      "Some natural paths and limited accessibility routes",
-      "No paths and no accessibility routes"
+# Plant effect for long-term residents in the interaction model:
+# main effect + interaction, with a delta-method robust SE
+long_term_plant_effects <- function(fit) {
+  V <- fit$robvarcov
+  map_dfr(c("1", "3"), function(k) {
+    main <- paste0("b_plant_", k)
+    int  <- paste0("b_plant_", k, "_az")
+    tibble(
+      parameter = paste0(main, "_longterm"),
+      estimate  = fit$estimate[[main]] + fit$estimate[[int]],
+      robust_se = sqrt(V[main, main] + V[int, int] + 2 * V[main, int])
     )
-  )
+  }) |>
+    mutate(
+      attribute = "Plant type",
+      level = c("Mostly native plants (10+ yrs in AZ)",
+                "Mostly non-native plants (10+ yrs in AZ)"),
+      robust_t = estimate / robust_se,
+      p_value  = 2 * pnorm(-abs(robust_t))
+    )
+}
 
-# Calculate robust test statistics and identify reference levels
-results_table <- results_table |>
-  mutate(
-    robust_t = estimate / robust_se,
-    p_value = 2 * pnorm(-abs(robust_t)),
-    
-    reference = case_when(
+format_results <- function(tab) {
+  tab |>
+    mutate(reference = case_when(
       parameter == "asc_A" ~ "B is reference",
-      is.na(robust_se) ~ "Reference",
-      TRUE ~ ""
+      is.na(robust_se)     ~ "Reference",
+      TRUE                 ~ ""
+    )) |>
+    transmute(
+      Attribute   = attribute,
+      Level       = level,
+      Estimate    = round(estimate, 3),
+      `Robust SE` = round(robust_se, 3),
+      `Robust t`  = round(robust_t, 2),
+      `p-value`   = case_when(
+        is.na(p_value)  ~ "",
+        p_value < .001  ~ "< .001",
+        TRUE            ~ sprintf("%.3f", p_value)
+      ),
+      Reference   = reference
     )
-  )
+}
 
-# Create a clean table for reporting
-final_results <- results_table |>
-  transmute(
-    Attribute = attribute,
-    Level = level,
-    Estimate = round(estimate, 3),
-    `Robust SE` = round(robust_se, 3),
-    `Robust t` = round(robust_t, 2),
-    `p-value` = case_when(
-      is.na(p_value) ~ "",
-      p_value < .001 ~ "< .001",
-      TRUE ~ sprintf("%.3f", p_value)
-    ),
-    Reference = reference
-  )
+# Headline table (no interaction): plant effects apply to the whole sample
+final_results <- tidy_mnl(model) |>
+  filter(!parameter %in% interaction_pars) |>
+  left_join(param_labels, by = "parameter") |>
+  format_results()
 
 final_results
 
-# Save the reporting table next to the Apollo output files
+# Interaction table: with the interaction in the model, b_plant_1 / b_plant_3
+# are the effects for respondents with UNDER 10 years in Arizona. The
+# long-term-resident effects (main + interaction) are added as extra rows.
+results_interaction <- tidy_mnl(model_interaction) |>
+  left_join(param_labels, by = "parameter") |>
+  mutate(level = if_else(parameter %in% c("b_plant_1", "b_plant_3"),
+                         paste0(level, " (under 10 yrs in AZ)"),
+                         level))
+
+plant_rows <- which(results_interaction$parameter == "b_plant_3_az")
+
+final_results_interaction <- bind_rows(
+  results_interaction[seq_len(plant_rows), ],
+  long_term_plant_effects(model_interaction),
+  results_interaction[-seq_len(plant_rows), ]
+) |>
+  format_results()
+
+final_results_interaction
+
+# Save the reporting tables next to the Apollo output files
 write_csv(final_results, file.path(output_dir, "mnl_results_table.csv"))
+write_csv(final_results_interaction,
+          file.path(output_dir, "mnl_results_table_plant_x_AZ.csv"))
 
 ```
