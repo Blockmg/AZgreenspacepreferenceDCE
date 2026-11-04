@@ -212,9 +212,11 @@ quality_flags <- df.vals |>
     n_chose_A       = rowSums(pick(all_of(choice_cols)) == 1, na.rm = TRUE),
     attention_shown = !is.na(qc_agree_label),
     flag_recaptcha  = !is.na(q_recaptcha_score) & q_recaptcha_score < 0.5,
-    flag_straightline = n_chose_A == 0 | n_chose_A == n_tasks,
+    flag_straightline = n_tasks > 0 & (n_chose_A == 0 | n_chose_A == n_tasks),
     flag_attention  = attention_shown & qc_agree_label != "Agree",
-    flag_speeder    = duration_in_seconds < median(duration_in_seconds) / 3,
+    # missing duration = not flagged (none are missing in the July 2026 data)
+    flag_speeder    = !is.na(duration_in_seconds) &
+                      duration_in_seconds < median(duration_in_seconds, na.rm = TRUE) / 3,
     exclude_quality = flag_recaptcha | flag_straightline | flag_attention | flag_speeder
   ) |>
   select(response_id, block, n_tasks, n_chose_A, q_recaptcha_score,
@@ -225,7 +227,7 @@ quality_flags <- df.vals |>
 quality_flags |> count(block, attention_shown)
 
 # Speeder cut-off (seconds)
-median(quality_flags$duration_in_seconds) / 3
+median(quality_flags$duration_in_seconds, na.rm = TRUE) / 3
 
 # How many respondents each rule flags, and in total
 quality_flags |>
@@ -360,7 +362,10 @@ database <- database |>
       zip3 == "851"                    ~ "Pinal County (851)",
       TRUE                             ~ "Other / missing"
     ),
-    tucson_zip = as.integer(zip3 %in% c("856", "857"))
+    # NA when no usable ZIP, so unknown geography stays out of both groups
+    tucson_zip = if_else(is.na(zip3) | !str_detect(zip3, "^[0-9]{3}$"),
+                         NA_integer_,
+                         as.integer(zip3 %in% c("856", "857")))
   )
 
 # Respondents by ZIP region

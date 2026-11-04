@@ -23,6 +23,11 @@ respondents. The question almost certainly sits inside the block-2 branch of the
 Qualtrics survey flow. Block-1 respondents therefore were never screened for
 attention, and nothing in the analysis can recover that.
 
+The export has no display metadata for `QC_agree`, so "shown" is inferred from
+whether it was answered. The one block-2 respondent with no answer is treated as
+not shown; they may instead have skipped it. To record exposure directly next
+time, add Embedded Data set inside the block that holds the check.
+
 How to report it: say the attention check was shown to block 2 only because of
 a survey-flow error, that every respondent who saw it passed, and that the other
 three screens (reCAPTCHA, straight-lining, speed) were applied to everyone.
